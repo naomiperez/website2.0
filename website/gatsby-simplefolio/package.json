@@ -44,28 +44,28 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
- //   "husky": "^4.2.5",
-    // "lint-staged": "^10.2.11",
-    // "prettier": "^2.0.5"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
   },
-  // "repository": {
-  //   "type": "git",
-  //   "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  // },
-  // "bugs": {
-  //   "url": "https://github.com/gatsbyjs/gatsby/issues"
-  // },
-  // "husky": {
-  //   "hooks": {
-  //     "pre-commit": "lint-staged"
-  //   }
-  // },
-  // "lint-staged": {
-  //   "*.+(js|jsx)": [
-  //     "eslint --fix"
-  //   ],
-  //   "*.+(json|css|md)": [
-  //     "prettier --write"
-  //   ]
-  // }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naomiperez/website2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write"
+    ]
+  }
 }
