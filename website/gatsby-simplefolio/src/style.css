@@ -8,23 +8,23 @@
 :root {
   --font-color: #495057;
   --heading-color: #343a40;
-  --background: white;
+  --background: #f3f2ea;
   --dark-font-color: #1b1d25;
   --medium-font-color: #60656c;
   --light-font-color: #858b93;
-  --light-background: #f1f4f8;
-  --light-background-hover: #e1e6ed;
+  --light-background: #d4d6cb;
+  --light-background-hover: #abb5a6;
   --border: #d6d9de;
-  --link-color: #5183f5;
-  --link-color-darker: #364fc7;
+  --link-color: #5f8073;
+  --link-color-darker: #38665f;
   --navbar-color: #1b1d25;
-  --blockquote: #edf2ff;
+  --blockquote: #dadbd2;
   --transparent-text: rgba(0, 0, 0, 0.7);
   --transparent-bg: rgba(0, 0, 0, 0.05);
   --light-transparent-bg: rgba(255, 255, 255, 0.1);
-  --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-    'Roboto', Roboto, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', Roboto,
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   --code-font-family: Menlo, 'Roboto Mono', Courier New, monospace;
   --border-color: var(--dark-font-color);
 }
@@ -540,8 +540,7 @@ main {
   top: 0;
   left: 0;
   background: var(--navbar-color);
-  box-shadow: 0 3px 13px rgba(100, 110, 140, 0.1),
-    0 2px 4px rgba(100, 110, 140, 0.15);
+  box-shadow: 0 3px 13px rgba(100, 110, 140, 0.1), 0 2px 4px rgba(100, 110, 140, 0.15);
   z-index: 2;
   padding: 0.5rem;
 }
@@ -562,10 +561,10 @@ main {
 }
 
 .navbar .grid {
-    display: grid;
-    grid-template-columns: auto auto 60px;
-    grid-template-rows: auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: auto auto 60px;
+  grid-template-rows: auto;
+  align-items: center;
 }
 
 .navbar button {
@@ -634,7 +633,7 @@ main {
   .navbar a.brand {
     font-size: 1.5rem;
     border: none;
-    background: transparent!important;
+    background: transparent !important;
     background-image: initial !important;
     background-position-x: initial !important;
     background-position-y: initial !important;
@@ -1212,8 +1211,8 @@ kbd {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 2px #fff;
   color: #333;
   display: inline-block;
-  font-family: Helvetica Neue, Inter, -apple-system, BlinkMacSystemFont,
-    Helvetica, Arial, sans-serif;
+  font-family: Helvetica Neue, Inter, -apple-system, BlinkMacSystemFont, Helvetica, Arial,
+    sans-serif;
   line-height: 1.4;
   margin: 0 0.1em;
   padding: 0.1em 0.6em;
