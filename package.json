@@ -51,7 +51,6 @@
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0"
   },
-  "plugins": ["gatsby-plugin-netlify"],
   "repository": {
     "type": "git",
     "url": "https://github.com/naomiperez/website2.0"
