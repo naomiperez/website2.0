@@ -14,8 +14,8 @@ export default function ProjectsIndex() {
         <header>
           <h1>Projects.</h1>
           <p className="subtitle">A few projects I&apos;ve created.</p>
-          <h2>TakeNote</h2>
-          <h4 className="no-underline">
+          <h2>Coming soon...</h2>
+          {/* <h4 className="no-underline">
             A free, open source notes app for the web.
           </h4>
           <p>
@@ -43,7 +43,7 @@ export default function ProjectsIndex() {
             Demo
           </a>
           <a href="https://takenote.dev" className="link-image" target="_blank">
-          </a>
+          </a> */}
         </header>
       </div>
     </Layout>
