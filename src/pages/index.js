@@ -9,7 +9,7 @@ import Blurb from '../components/Blurb'
 import Media from '../components/Media'
 import naomi from '../images/avatar.jpg'
 
-export default () => {
+const Home = () => {
   const { title } = headData;
 
   const Section = ({ title, children, button, ...props }) => (
@@ -47,3 +47,5 @@ export default () => {
     </>
   );
 };
+
+export default Home;

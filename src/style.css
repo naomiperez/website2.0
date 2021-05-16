@@ -135,14 +135,6 @@ a.section-button:hover {
   margin-right: auto;
 }
 
-.page p {
-  max-width: 700px;
-}
-
-.page img {
-  margin-top: 1rem;
-}
-
 @media screen and (min-width: 800px) {
   .container {
     padding: 0 2rem;
@@ -1365,156 +1357,6 @@ kbd {
   }
 }
 
-/* Guide */
-
-.guide-thumbnails {
-  display: none;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.guide-thumbnails a {
-  border: 2px solid var(--light-background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.3rem;
-  padding: 0.4rem;
-  margin: 0.25rem;
-  color: var(--font-color);
-}
-
-.guide-thumbnails span {
-  display: none;
-}
-
-.guide-thumbnails a:hover {
-  background: var(--light-background);
-  transform: translate3d(0, -1px, 0);
-}
-
-.guide-thumbnails img,
-.guide-thumbnails .gatsby-image-wrapper {
-  max-width: 30px;
-  max-height: 30px;
-}
-
-@media screen and (min-width: 800px) {
-  .guide-thumbnails {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .guide-thumbnails a {
-    min-width: 80px;
-    flex-direction: column;
-  }
-
-  .guide-thumbnails span {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 400;
-  }
-
-  .guide-thumbnails img,
-  .guide-thumbnails .gatsby-image-wrapper {
-    max-width: 30px;
-    max-height: 30px;
-    margin-bottom: 0.25rem;
-  }
-}
-
-.guides .gatsby-image-wrapper {
-  height: 50px !important;
-  width: 50px !important;
-  min-width: 50px;
-  margin-left: 1.5rem;
-}
-
-.guides.front-page .guide h2 {
-  margin-bottom: 0;
-}
-
-.guides.front-page img {
-  height: 50px !important;
-  width: 50px !important;
-  min-width: 50px;
-  margin-left: 1rem;
-}
-
-.guides .guide:last-of-type {
-  border-bottom-color: transparent;
-}
-
-.guide {
-  padding: 1.5rem 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.guide h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-  margin: 0;
-  border-bottom: none;
-  text-decoration: underline;
-  font-family: var(--font-family);
-  letter-spacing: 0;
-}
-
-.guide a h2:hover {
-  color: var(--light-font-color);
-}
-
-.guide p {
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.5;
-  color: var(--medium-font-color);
-  font-size: 1.1rem;
-}
-
-.guide time {
-  font-size: 1rem;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 800px) {
-  .guide {
-    padding: 3rem 0;
-    border-bottom: 3px solid var(--border-color);
-  }
-
-  .guide p {
-    font-size: 1.3rem;
-  }
-
-  .guide h2 {
-    font-size: 1.55rem;
-  }
-
-  .guides.front-page img {
-    margin-right: 1.5rem;
-  }
-
-  .guides.front-page .guide {
-    border-bottom: none;
-  }
-
-  .guides .gatsby-image-wrapper {
-    height: 100px !important;
-    width: 100px !important;
-    min-width: 100px;
-    margin-left: 2.5rem;
-  }
-
-  .guides.front-page .guide {
-    padding: 1.5rem 0;
-  }
-}
-
 .stack-mobile {
   display: flex;
   flex-direction: column;
@@ -1549,29 +1391,64 @@ kbd {
 }
 
 /* About Page */
-.about .container {
-  text-indent: 50px;
+
+.about {
   display: flex;
-}
-
-.grid > .leftcol {
   flex-direction: column;
+  max-width: 1000px;
+  padding: 1rem 4rem 1rem 4rem;
+  margin:auto;
+}
+
+.about .row {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
 }
 
-.grid > .rightcol {
-  flex-direction: column;
-  align-items: center;
+.row p {
+  text-indent: 50px;
+  text-align: justify;
 }
 
-/* .about .container .grid img {
-  
-} */
-
-#image1 {
-  max-width: 150px;
+.row #image1 {
+  max-width: 200px;
+  border-radius: 12px;
+  border: 3px solid var(--border-color);
 }
 
-#image2 {
-  max-width: 400px;
+.row #image2 {
+  max-width: 574px;
+  max-height: 373px;
+  border-radius: 12px;
+  border: 3px solid var(--border-color);
+}
+
+/* YouTube Embed */
+.video-responsive {
+  position: relative !important;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin: 5% 10% 5% 10%;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Education (Courses) Grid */
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-item {
+  width:25%;
+  margin: 20px;
 }
