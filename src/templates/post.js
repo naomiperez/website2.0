@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from '../components/Layout'
 import Suggested from '../components/Suggested'
@@ -43,10 +43,9 @@ export default function PostTemplate({ data, pageContext }) {
                   </div>
                 </div>
                 {thumbnail && (
-                  <Img
-                    fixed={thumbnail.childImageSharp.fixed}
-                    className="post-thumbnail"
-                  />
+                  <GatsbyImage
+                    image={thumbnail.childImageSharp.gatsbyImageData}
+                    className="post-thumbnail" />
                 )}
               </div>
             </div>
@@ -92,5 +91,5 @@ export default function PostTemplate({ data, pageContext }) {
         <Suggested previous={previous} next={next} />
       </div>
     </Layout>
-  )
+  );
 }

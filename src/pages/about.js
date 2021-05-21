@@ -2,11 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import Blurb from '../components/Blurb'
-import YoutubeEmbed from '../components/YoutubeEmbed'
 import { headData } from '../mock/data'
 import { StaticImage } from "gatsby-plugin-image"
-
-import naomi from '../images/grad.png'
 
 
 
@@ -15,7 +12,7 @@ export default function About(){
     return (
     <Layout>
         <Helmet title={`About | ${headData.title}`} />
-        <Blurb title="About Me." img={naomi}></Blurb>
+        <Blurb title="About Me." ></Blurb>
             <div className="about">
                     
                    
@@ -26,7 +23,7 @@ export default function About(){
                         </p>
                     </div>
                     <div className="row">
-                        <StaticImage src='../images/umd.jpeg' alt="UMD Logo" id="image1" />
+                        <StaticImage src='../images/umd.png' alt="UMD Logo" id="image1" />
                     </div>
                     <div className="row">
                         <p>
@@ -34,7 +31,7 @@ export default function About(){
                         </p>
                         </div>
                         <div className="row">
-                            <StaticImage src='../images/gwc.jpeg' alt="GWC Group Picture" id="image2" />
+                            <StaticImage src='../images/gwc.png' alt="GWC Group Picture" id="image2" />
                         </div>
                         <div className="row">
                         <p>
@@ -58,3 +55,4 @@ export default function About(){
     )
 
 }
+

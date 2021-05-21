@@ -7,7 +7,7 @@ import projects from '../mock/projects'
 import Projects from '../components/Projects'
 import Blurb from '../components/Blurb'
 import Media from '../components/Media'
-import naomi from '../images/avatar.jpg'
+
 
 const Home = () => {
   const { title } = headData;
@@ -30,7 +30,7 @@ const Home = () => {
     <>
       <Layout>
       <Helmet title={title} />
-      <Blurb title="I'm Naomi Perez." img={naomi}>
+      <Blurb title="I'm Naomi Perez." img="../images/avatar.png">
         <p>
           I&apos;m a software engineer and an artist. Welcome to my digital portfolio &nbsp; :)
         </p>

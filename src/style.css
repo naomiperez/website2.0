@@ -402,7 +402,7 @@ h5 {
   .avatar {
     margin-top: 0;
     max-height: none;
-    max-width: 350px;
+    max-width: 310px;
     margin-left: 2rem;
   }
 }
@@ -889,7 +889,7 @@ header u {
   padding: 0.4rem 0;
 }
 
-.article-header {
+/* .article-header {
   padding-top: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -1032,7 +1032,7 @@ header u {
   .article-header h1 {
     font-size: 2.5rem;
   }
-}
+} */
 
 .post-thumbnail {
   display: block !important;

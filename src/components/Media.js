@@ -2,6 +2,8 @@ import React from 'react'
 import linkedin from '../images/linkedin.png'
 import resume from '../images/resume.png'
 import github from '../images/github.png'
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 export default class Media extends React.Component {
 

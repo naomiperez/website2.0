@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import floppy from '../images/smallfloppy.png'
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Nav() {
     return (
@@ -10,7 +10,7 @@ export default function Nav() {
             <div>
               <Link to="/" className="brand">
                 <span className="emoji">
-                  <img src={floppy} alt="Floppy Diskette" />
+                  <StaticImage src="../images/smallfloppy.png" width="50" alt="Floppy" />
                 </span>{' '}
                 Naomi Perez
               </Link>
@@ -36,7 +36,7 @@ export default function Nav() {
   
                     if (link) {
                       link.forEach((el) => el.remove())
-                      event.target.textContent = '🌙'
+                      event.target.textContent = '🍂'
                     }
                   } else {
                     typeof window !== 'undefined' &&
@@ -55,7 +55,7 @@ export default function Nav() {
                 {typeof window !== 'undefined' &&
                 localStorage.getItem('theme') === 'dark'
                   ? '☀️'
-                  : '🌙'}
+                  : '🌿'}
               </button>
             </div>
           </div>

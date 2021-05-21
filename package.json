@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "gatsby": "^3.5.0",
-    "gatsby-image": "^3.5.0",
     "gatsby-link": "^3.5.0",
     "gatsby-plugin-image": "^1.5.0",
     "gatsby-plugin-manifest": "^3.5.0",
@@ -26,7 +25,9 @@
     "gatsby-plugin-sass": "^4.5.0",
     "gatsby-plugin-sharp": "^3.5.0",
     "gatsby-source-filesystem": "^3.5.0",
+    "gatsby-transformer-remark": "^4.2.0",
     "gatsby-transformer-sharp": "^3.5.0",
+    "image-webpack-loader": "^7.0.1",
     "nanoid": "^3.1.10",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
