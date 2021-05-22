@@ -1,11 +1,11 @@
 :root {
-    --font-color: #d1b58e;
-    --heading-color: #dfcebd;
+    --font-color: #ccb997;
+    --heading-color: #c59a61;
     --dark-font-color: #b68b50;
     --background: #472e1df3;
-    --medium-font-color: #dab189;
+    --medium-font-color: #dfcebd;
     --light-font-color: #dfcebd;
-    --light-background: #664828f3;
+    --light-background: #684a35;
     --light-background-hover: #4b2b09;
     --code-background-color: #2e2e30;
     --border: #dfcebd;
@@ -17,11 +17,11 @@
     --transparent-text: rgba(255, 255, 255, 0.8);
     --transparent-bg: rgba(0, 0, 0, 0.2);
     --light-transparent-bg: rgba(255, 255, 255, 0.05);
-    --border-color: #8a6237f3;
+    --border-color: #c59a61;
   }
   
   h1 {
-    color: #b49162;
+    color: var(--heading-color);
   }
   
   h3,
@@ -60,18 +60,18 @@
   }
   
   .navbar a {
-    color: var(--transparent-text);
+    color:#dfcebd;
   }
   
   .navbar a:hover,
   .navbar a[aria-current='page'],
   .footer a:hover {
-    color: white;
+    color: rgb(238, 232, 224);
     border-color: transparent;
   }
   
   .navbar a.brand {
-    color: var(--transparent-text);
+    color: #dfcebd;
   }
   
   .filename {

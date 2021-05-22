@@ -4,7 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;600&display=swap');
 :root {
   --font-color: #495057;
   --heading-color: #343a40;
@@ -22,7 +24,7 @@
   --transparent-text: rgba(0, 0, 0, 0.7);
   --transparent-bg: rgba(0, 0, 0, 0.05);
   --light-transparent-bg: rgba(255, 255, 255, 0.1);
-  --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', Roboto,
+  --font-family: 'Inconsolata',  monospace, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', Roboto,
     Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
   --code-font-family: Menlo, 'Roboto Mono', Courier New, monospace;

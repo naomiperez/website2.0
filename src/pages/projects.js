@@ -44,6 +44,9 @@ export default function ProjectsIndex() {
                 language comparable to Java with added features.
               </p>
             <h2>Testudo Noserubber Game</h2>
+            <h4 className="no-underline">
+                A 2D-platformer game built in Unity that promotes UMD student health
+              </h4>
              <p>
                 <small>
                   <i>
