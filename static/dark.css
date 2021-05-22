@@ -1,27 +1,27 @@
 :root {
-    --font-color: #b3b9c5;
-    --heading-color: #ffd479;
-    --dark-font-color: #ced4da;
-    --background: #1f2022;
-    --medium-font-color: #dee2e6;
-    --light-font-color: #868e96;
-    --light-background: #2d2d31;
-    --light-background-hover: #3b3b3e;
+    --font-color: #be9458;
+    --heading-color: #b49162;
+    --dark-font-color: #a67b40;
+    --background: #472e1df3;
+    --medium-font-color: #ddbb99;
+    --light-font-color: #ddbb99;
+    --light-background: #664828f3;
+    --light-background-hover: #4b2b09;
     --code-background-color: #2e2e30;
-    --border: #404040;
-    --link-color: #6ab0f3;
-    --link-color-darker: #4a72a5;
-    --link-hover-color: #e1a6f2;
+    --border: #a67b40;
+    --link-color: #d6c188;
+    --link-color-darker: #dac488;
+    --link-hover-color: rgb(231, 210, 151);
     --navbar-color: #1d1d1d;
     --blockquote: #2a4661;
-    --transparent-text: rgba(255, 255, 255, 0.7);
+    --transparent-text: rgba(255, 255, 255, 0.8);
     --transparent-bg: rgba(0, 0, 0, 0.2);
     --light-transparent-bg: rgba(255, 255, 255, 0.05);
-    --border-color: #3b3b3b;
+    --border-color: #a67b40;
   }
   
   h1 {
-    color: white;
+    color: #b49162;
   }
   
   h3,
@@ -71,7 +71,7 @@
   }
   
   .navbar a.brand {
-    color: white;
+    color: var(--transparent-text);
   }
   
   .filename {
@@ -169,6 +169,10 @@
   }
   
   .blurb {
-    background: #111;
+    background: #684a35;
   }
   
+  /* Media */
+  .media {
+    filter: sepia(1) saturate(7) contrast(40%);
+  }

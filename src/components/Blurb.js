@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import avatar from '../images/avatar.png'
+import avatar from '../images/typing.png'
 
 export default function Blurb({ title, children, data, img }) {
   return (
@@ -19,19 +19,3 @@ export default function Blurb({ title, children, data, img }) {
     </section>
   )
 }
-
-// export const pageQuery = graphql`
-//      query {
-//        file(
-//          relativePath: { eq: "../images/avatar.png" }
-//        ) {
-//         childImageSharp {
-//           gatsbyImageData(
-//             width: 300
-//             placeholder: BLURRED
-//             formats: [WEBP]
-//           )
-//         }
-//        }
-//       }
-// `;

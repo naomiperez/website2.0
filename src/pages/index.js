@@ -30,9 +30,9 @@ const Home = () => {
     <>
       <Layout>
       <Helmet title={title} />
-      <Blurb title="I'm Naomi Perez." img="../images/avatar.png">
+      <Blurb title="I'm Naomi Perez." >
         <p>
-          I&apos;m a software engineer and an artist. Welcome to my digital portfolio &nbsp; :)
+          I&apos;m a software engineer, artist, and mental-health advocate. Welcome to my digital portfolio! 😊
         </p>
       </Blurb>
       <div className="container index">

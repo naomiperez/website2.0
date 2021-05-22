@@ -14,16 +14,13 @@ export default function About(){
         <Helmet title={`About | ${headData.title}`} />
         <Blurb title="About Me." ></Blurb>
             <div className="about">
-                    
-                   
-
                     <div className="row">
                         <p>
-                        Hi, I'm Naomi! I'm a software engineer and soon to be graduate from the University of Maryland in College Park where I study Computer Science. 
+                        Hi, I'm Naomi! I'm a software engineer and graduate from the University of Maryland in College Park where I studied Computer Science. 
                         </p>
                     </div>
                     <div className="row">
-                        <StaticImage src='../images/umd.png' alt="UMD Logo" id="image1" />
+                        <StaticImage src="../images/umd.png" alt="UMD Logo" id="image1" />
                     </div>
                     <div className="row">
                         <p>
@@ -31,7 +28,7 @@ export default function About(){
                         </p>
                         </div>
                         <div className="row">
-                            <StaticImage src='../images/gwc.png' alt="GWC Group Picture" id="image2" />
+                            <StaticImage src="../images/gwc.png" alt="GWC Group Picture" id="image2" />
                         </div>
                         <div className="row">
                         <p>

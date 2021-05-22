@@ -15,7 +15,7 @@ export default function Nav() {
                 Naomi Perez
               </Link>
             </div>
-  
+            
             <div className="menu-item flex">
               <Link to="/projects">Projects</Link>
               <Link to="/education">Education</Link>
@@ -36,12 +36,12 @@ export default function Nav() {
   
                     if (link) {
                       link.forEach((el) => el.remove())
-                      event.target.textContent = '🍂'
+                      event.target.textContent = '☕'
                     }
                   } else {
                     typeof window !== 'undefined' &&
                       localStorage.setItem('theme', 'dark')
-                    event.target.textContent = '☀️'
+                    event.target.textContent = '🌿'
                     const head = document.getElementsByTagName('head')[0]
                     const link = document.createElement('link')
                     link.rel = 'stylesheet'
@@ -54,8 +54,8 @@ export default function Nav() {
               >
                 {typeof window !== 'undefined' &&
                 localStorage.getItem('theme') === 'dark'
-                  ? '☀️'
-                  : '🌿'}
+                  ? '🌿'
+                  : '☕'}
               </button>
             </div>
           </div>
