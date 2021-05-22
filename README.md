@@ -2,7 +2,7 @@
 # website2.0 -> https://naomiperez.netlify.app
 Note: Elements of CSS theme were designed by and cloned from tania rascia.
 
-<h4>Learning/working on:</h4> React, Gatsby, front end
+<h4>Learning/working on:</h4> React, Gatsby, CSS, front end
 
 <h4> My success in image optimization with Gatsby: </h4>
 
