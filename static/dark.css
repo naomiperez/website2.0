@@ -1,23 +1,23 @@
 :root {
-    --font-color: #be9458;
-    --heading-color: #b49162;
-    --dark-font-color: #a67b40;
+    --font-color: #d1b58e;
+    --heading-color: #dfcebd;
+    --dark-font-color: #b68b50;
     --background: #472e1df3;
-    --medium-font-color: #ddbb99;
-    --light-font-color: #ddbb99;
+    --medium-font-color: #dab189;
+    --light-font-color: #dfcebd;
     --light-background: #664828f3;
     --light-background-hover: #4b2b09;
     --code-background-color: #2e2e30;
-    --border: #a67b40;
+    --border: #dfcebd;
     --link-color: #d6c188;
-    --link-color-darker: #dac488;
-    --link-hover-color: rgb(231, 210, 151);
+    --link-color-darker: #caaa8a;
+    --link-hover-color: #dfbe9e;
     --navbar-color: #1d1d1d;
     --blockquote: #2a4661;
     --transparent-text: rgba(255, 255, 255, 0.8);
     --transparent-bg: rgba(0, 0, 0, 0.2);
     --light-transparent-bg: rgba(255, 255, 255, 0.05);
-    --border-color: #a67b40;
+    --border-color: #8a6237f3;
   }
   
   h1 {

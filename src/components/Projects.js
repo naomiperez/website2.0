@@ -47,15 +47,15 @@ function DisplayProjects(node) {
     return (
       <div className="project" key={node.title}>
         <div>
-          <a
+          {/* <a
             href={node.path || node.source}
             key={node.path || node.source}
             target="_blank"
             rel="noreferrer"
-          >
+          > */}
             <div className="icon">{node.icon}</div>
             <h3>{node.title}</h3>
-          </a>
+          {/* </a> */}
           <div className="description">{node.description}</div>
         </div>
       </div>

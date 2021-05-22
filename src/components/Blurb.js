@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { StaticImage, getImage } from 'gatsby-plugin-image'
 import avatar from '../images/typing.png'
 
-export default function Blurb({ title, children, data, img }) {
+export default function Blurb({ title, children }) {
   return (
     <section className="blurb">
       <div className="container">
@@ -12,8 +12,7 @@ export default function Blurb({ title, children, data, img }) {
           {children}
         </div>
         <div>
-            <img src={avatar} className="avatar"/>
-          
+          <StaticImage src="../images/typing.png" width="310" className="avatar" alt="Typing on Keyboard" />
         </div>
       </div>
     </section>
