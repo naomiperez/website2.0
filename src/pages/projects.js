@@ -93,7 +93,6 @@ export default function ProjectsIndex() {
                 </small>
               </p>
               <p>
-                <br></br>
                 This system allows users to request abstract resources. A ResourceManager forwards 
                 requests for remote resources, and processes requests to access and manage local 
                 resources (e.g., write access to a resource, enable/disable resource).
