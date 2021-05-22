@@ -1,8 +1,5 @@
 import React from 'react'
-import linkedin from '../images/linkedin.png'
-import resume from '../images/resume.png'
-import github from '../images/github.png'
-import { GatsbyImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 
 export default class Media extends React.Component {
@@ -11,11 +8,11 @@ export default class Media extends React.Component {
         return (
             <div className="media-grid">
                 <a href="https://www.linkedin.com/in/naomisp/" target="_blank" >
-                    <img src={linkedin} alt="linkedin" className="media" />
+                    <StaticImage src="../images/linkedin.png" width="100" alt="LinkedIn" className="media" />
                 </a>
                 {/* <img src={resume} alt="resume" className="media" /> */}
                 <a href="https://github.com/naomiperez" target="_blank" >
-                    <img src={github} alt="git" className="media" />
+                    <StaticImage src="../images/github.png" width="100" alt="GitHub" className="media" />
                 </a>
             </div>
         );

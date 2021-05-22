@@ -20,7 +20,7 @@ export default function About(){
                         </p>
                     </div>
                     <div className="row">
-                        <StaticImage src="../images/umd.png" alt="UMD Logo" id="image1" />
+                        <StaticImage src="../images/umd.png" width="200" alt="UMD Logo" id="image1" />
                     </div>
                     <div className="row">
                         <p>
@@ -28,7 +28,7 @@ export default function About(){
                         </p>
                         </div>
                         <div className="row">
-                            <StaticImage src="../images/gwc.png" alt="GWC Group Picture" id="image2" />
+                            <StaticImage src="../images/gwc.png" width="574" alt="GWC Group Picture" id="image2" />
                         </div>
                         <div className="row">
                         <p>
