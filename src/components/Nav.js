@@ -20,6 +20,7 @@ export default function Nav() {
               <Link to="/projects">Projects</Link>
               <Link to="/education">Education</Link>
               <Link to="/about">About Me</Link>
+              <Link to="/blog" >Blog</Link>
             </div>
   
             <div className="button-item">

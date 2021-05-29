@@ -21,16 +21,13 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Gatsby Simplefolio`,
-    //     short_name: `Simplefolio`,
-    //     start_url: `/`,
-    //     background_color: `#fff`,
-    //     theme_color: `#02aab0`,
-    //     display: `standalone`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog/`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };

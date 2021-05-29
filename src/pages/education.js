@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import Projects from '../components/Projects'
 import { headData } from '../mock/data'
 import courses from '../mock/courses'
-
 import Layout from '../components/Layout'
 
 export default function Education() {
@@ -57,7 +56,11 @@ export default function Education() {
           </p>
           <br></br>
           <p>
-            I also gained invaluable communication skills, experience in pair-programming, a vocabulary to understand my experiences as an underrepresented identity in STEM, and had the opportunity to present a formal proposal to the Fullscreen Media leadership team (including Sarah Harden, President of Otter Media at Fullscreen Media) for a new feature to implement in their upcoming mobile-app.
+            I also gained invaluable communication skills, experience in pair-programming, a vocabulary to 
+            understand my experiences as an underrepresented identity in STEM, and had the opportunity to present 
+            a formal proposal to the Fullscreen Media leadership team (including Sarah Harden, President of Otter 
+            Media at Fullscreen Media) for a new feature to implement in their upcoming mobile-app. This feature was
+            added to the app one year after my presentation (named "Watch Party").
             <br></br>
             <br></br>
           <p>

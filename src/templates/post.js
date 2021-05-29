@@ -1,95 +1,30 @@
-import React, { useEffect } from 'react'
-import { Link, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
-import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 
-import Layout from '../components/Layout'
-import Suggested from '../components/Suggested'
-import SEO from '../components/SEO'
-import Comment from '../components/Comment'
-import Blurb from '../components/Blurb'
-import config from '../utils/config'
-import { slugify } from '../utils/helpers'
-
-export default function PostTemplate({ data, pageContext }) {
-  const { previous, next } = pageContext
-  const { tags, thumbnail, title, description, date } = post.frontmatter
-  const commentBox = React.createRef()
-
-  useEffect(() => {
-    const commentScript = document.createElement('script')
-    const theme =
-      typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark'
-        ? 'github-dark'
-        : 'github-light'
-  }, []) // eslint-disable-line
+export default function Post({ data }) {
+  const post = data.markdownRemark
 
   return (
-    <Layout>
-      <Helmet title={`${post.frontmatter.title} | ${config.siteTitle}`} />
-      <SEO postPath={post.fields.slug} postNode={post} postSEO />
-      <div className="container">
-        <article>
-          <header className="article-header">
-            <div className="container">
-              <div className="thumb">
-                <div>
-                  <h1>{title}</h1>
-                  <div className="post-meta">
-                    <div>
-                      By <Link to="/me">Tania Rascia</Link> on{' '}
-                      <time>{date}</time>
-                    </div>
-                  </div>
-                </div>
-                {thumbnail && (
-                  <GatsbyImage
-                    image={thumbnail.childImageSharp.gatsbyImageData}
-                    className="post-thumbnail" />
-                )}
-              </div>
-            </div>
-            {description && <p className="description">{description}</p>}
-          </header>
-          <div
-            className="article-post"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-        </article>
-      </div>
-      <Blurb title="About the author">
-        <p>
-          Hey, I'm <Link to="/me">Tania</Link>, a software engineer, writer, and
-          open-sourceror. I publish articles and tutorials about modern
-          JavaScript, design, and programming.
-        </p>
-        <p>
-          <a
-            className="button"
-            href="https://taniarascia.substack.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Get the newsletter
-          </a>
-          <a
-            className="button"
-            href="https://ko-fi.com/taniarascia"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Buy me a coffee
-          </a>
-        </p>
-      </Blurb>
-      <div className="container">
-        <div id="comments">
-          <h2>Comments</h2>
-          <Comment commentBox={commentBox} />
+      <Layout>
+        <div className="container">
+          <h1>{post.frontmatter.title}</h1>
+          <small>{post.frontmatter.date}</small>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
+      </Layout>
 
-        <Suggested previous={previous} next={next} />
-      </div>
-    </Layout>
-  );
+  )
 }
+
+export const query = graphql`
+  query BlogQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        date(formatString: "MM/DD/YYYY")
+      }
+    }
+  }
+`
