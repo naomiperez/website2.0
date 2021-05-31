@@ -575,6 +575,10 @@ main {
   display: none;
 }
 
+.navbar #name {
+  display: none;
+}
+
 .navbar a:first-of-type {
   margin-left: -1rem;
 }
@@ -645,7 +649,9 @@ main {
     background-color: transparent !important;
     color: var(--dark-font-color);
   }
-
+  .navbar #name {
+    display:contents;
+  }
   .navbar a.brand img {
     height: 30px;
     width: 30px;

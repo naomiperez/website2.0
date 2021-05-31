@@ -11,7 +11,7 @@ export default function Blog({ data }) {
     <Layout>
         <Helmet title={`Blog | ${headData.title}`} />
         <div className="container">
-            <h1>My blog posts</h1>
+            <h1>My blog (varying content)</h1>
             <br></br>
             {posts.map(post => (
                 <article key={post.id}>
@@ -37,7 +37,7 @@ export default function Blog({ data }) {
 
 export const pageQuery = graphql`
   query MyQuery {
-    blog: allMarkdownRemark {
+    blog: allMarkdownRemark (sort: { fields: [frontmatter___date], order: DESC }){
       posts: nodes {
         fields {
           slug

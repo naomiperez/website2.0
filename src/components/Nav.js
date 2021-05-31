@@ -12,14 +12,16 @@ export default function Nav() {
                 <span className="emoji">
                   <StaticImage src="../images/smallfloppy.png" width="50" alt="Floppy" />
                 </span>{' '}
-                Naomi Perez
+                <div id="name">
+                  Naomi Perez
+                </div>
               </Link>
             </div>
             
             <div className="menu-item flex">
               <Link to="/projects">Projects</Link>
               <Link to="/education">Education</Link>
-              <Link to="/about">About Me</Link>
+              <Link to="/about">About</Link>
               <Link to="/blog" >Blog</Link>
             </div>
   
