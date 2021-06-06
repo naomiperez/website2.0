@@ -1,7 +1,5 @@
 import React from 'react'
-import { graphql } from "gatsby"
 import { StaticImage, getImage } from 'gatsby-plugin-image'
-import avatar from '../images/typing.png'
 
 export default function Blurb({ title, children }) {
   return (

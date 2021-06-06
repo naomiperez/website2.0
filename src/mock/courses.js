@@ -21,7 +21,7 @@ export default [
       },
       {
         title: 'CMSC351',
-        description: '[Algorithms] Study of programming languages syntax, semantics, and implementation',
+        description: '[Algorithms] Introduction to the techniques for designing efficient computer algorithms and analyzing their running times',
       },
       {
         title: 'CMSC320',

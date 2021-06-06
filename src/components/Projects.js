@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from "prop-types"
 import useCollapse from 'react-collapsed'
-import Collapse from "@kunukn/react-collapse";
-
 
 export default function Projects({ data }) {
     let collapsed = true;
@@ -55,7 +53,6 @@ function DisplayProjects(node) {
           > */}
             <div className="icon">{node.icon}</div>
             <h3>{node.title}</h3>
-          {/* </a> */}
           <div className="description">{node.description}</div>
         </div>
       </div>

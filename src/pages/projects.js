@@ -2,10 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticImage } from 'gatsby-plugin-image'
 import { headData } from '../mock/data'
-
 import Layout from '../components/Layout'
-
-
 
 export default function ProjectsIndex() {
   return (
