@@ -13,6 +13,28 @@ export default function ProjectsIndex() {
             <p className="subtitle">
               A few projects I&apos;ve created.
             </p>
+            <h2>Mood Tracking App</h2>
+              <p>
+                <small>
+                  <i>
+                    Tools: React.js, React Native, Expo SDK, Firestore, Firebase Auth, Victory Native (Data Visualization Library)
+                  </i>
+                </small>
+              </p>
+              <p>
+              I have always wanted to create a mood tracking app, so I was so excited to build this app as a method of teaching myself the React Native framework and improving my skills with React.js, databases, cloud storage, authentication, and data visualization.
+              </p>
+              <p>
+              This app is a current and on-going project for myself. So far, I've implemented account creation and persistent login with Firebase Auth; data storage, management, and querying with Firebase Firestore and React Hooks; and visualization of data insights with the data visualization library. A user can log in to their account with an email and password (or just open the app to the home page if they have previously logged in), log their mood (in addition to other "factors") each day on a calendar, change previous logs, and view personal monthly insights on the Insights page. 
+              </p>
+              <p>
+              In the future, I hope to make improvements to the UI  such as optimizing the rendering of certain components and visual/theme improvements. I also hope to add more "factors" that users can track. The app currently allows for users to log mood and sleep, so in the future I hope to add even more such as energy levels, activity levels, medications, and potentially even implement integrations with other health tracking apps, like Apple Health and Google Fit. With more factors, I also hope to add more complex data insights, where users can compare how factors affect their mood. I've published the app to Expo Web, and I hope to publish it to the IOS App store, as well. All coming soon!
+              </p>
+              <StaticImage src="../images/80app/home.png" width="250" alt="App Homepage" />
+              &emsp;&emsp;
+              <StaticImage src="../images/80app/sleepTrack.png" width="250" alt="App Homepage" />
+              &emsp;&emsp;
+              <StaticImage src="../images/80app/insights.png" width="250" alt="App Homepage" />
             <h2>MAFIA43 Android App</h2>
               <h4 className="no-underline">
                 A mobile app built in Android Studio that serves as a virtual moderator for the Mafia party game
@@ -32,7 +54,6 @@ export default function ProjectsIndex() {
                 communication, meeting schedule, and a task breakdown plan that worked 
                 for all members. 
               </p>
-              <br></br>
               <p>
                 I implemented multiple UI components from mockups created 
                 by team members, the UI and logic of a reusable and scrollable player 

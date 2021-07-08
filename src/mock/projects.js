@@ -1,5 +1,10 @@
 export default [
   {
+    icon: '🧠',
+    title: 'Mood Tracker',
+    description: 'A mood tracking mobile app that provides data insights.',
+  },
+  {
     icon: '🐢',
     title: 'Testudo Noserub',
     description: 'A 2D platformer game based on UMD mascot Testudo mythology.',
