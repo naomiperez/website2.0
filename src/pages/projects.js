@@ -30,11 +30,11 @@ export default function ProjectsIndex() {
               <p>
               In the future, I hope to make improvements to the UI  such as optimizing the rendering of certain components and visual/theme improvements. I also hope to add more "factors" that users can track. The app currently allows for users to log mood and sleep, so in the future I hope to add even more such as energy levels, activity levels, medications, and potentially even implement integrations with other health tracking apps, like Apple Health and Google Fit. With more factors, I also hope to add more complex data insights, where users can compare how factors affect their mood. I've published the app to Expo Web, and I hope to publish it to the IOS App store, as well. All coming soon!
               </p>
-              <StaticImage src="../images/80app/home.png" width="250" alt="App Homepage" />
+              <StaticImage src="../images/80app/home.PNG" width="250" alt="App Homepage" />
               &emsp;&emsp;
-              <StaticImage src="../images/80app/sleepTrack.png" width="250" alt="App Homepage" />
+              <StaticImage src="../images/80app/sleepTrack.PNG" width="250" alt="App Sleep Tracking on Homepage" />
               &emsp;&emsp;
-              <StaticImage src="../images/80app/insights.png" width="250" alt="App Homepage" />
+              <StaticImage src="../images/80app/insights.PNG" width="250" alt="App Insights Page" />
             <h2>MAFIA43 Android App</h2>
               <h4 className="no-underline">
                 A mobile app built in Android Studio that serves as a virtual moderator for the Mafia party game
