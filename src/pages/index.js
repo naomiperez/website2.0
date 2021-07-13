@@ -32,7 +32,7 @@ const Home = () => {
       <Helmet title={title} />
       <Blurb title="I'm Naomi Perez." >
         <p>
-          I&apos;m a software engineer, artist, and mental-health advocate. Welcome to my digital portfolio! 😊
+          I&apos;m a software developer specializing in building web and mobile applications. Welcome to my digital portfolio! 😊
         </p>
       </Blurb>
       <div className="container index">

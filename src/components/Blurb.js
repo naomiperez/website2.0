@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticImage, getImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 export default function Blurb({ title, children }) {
   return (

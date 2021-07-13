@@ -174,5 +174,5 @@
   
   /* Media */
   .media {
-    filter: sepia(1) saturate(7) contrast(40%);
+    filter: invert(1) brightness(0.8);
   }

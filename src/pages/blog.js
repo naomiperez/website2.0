@@ -29,12 +29,6 @@ export default function Blog({ data }) {
   )
 }
 
-//  querying for all Markdown files using allMarkdownRemark from gatsby-transformer-remark
-
-// gatsby-source-filesystem “scans” the directories we tell it to & creates nodes for each file in those directories. Then gatsby-markdown-remark comes, parses data inside the nodes, and adds extra fields to those node objects.
-
-// Gatsby then concludes and comes up with a GraphQL schema for those nodes, based on their content.
-
 export const pageQuery = graphql`
   query MyQuery {
     blog: allMarkdownRemark (sort: { fields: [frontmatter___date], order: DESC }){
