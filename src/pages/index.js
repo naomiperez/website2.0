@@ -7,10 +7,6 @@ import projects from '../mock/projects'
 import Projects from '../components/Projects'
 import Blurb from '../components/Blurb'
 import Media from '../components/Media'
-import ReactGA from 'react-ga';
-
-ReactGA.initialize('G-J50B768LDZ'); // add your tracking id here.
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Home = () => {
   const { title } = headData;
