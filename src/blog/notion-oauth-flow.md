@@ -21,3 +21,41 @@ This diagram can be used as a helpful frame of reference, but please do your own
 ![Notion OAuth Flow Diagram](./images/notion-oauth-flow.png)
 <p style="text-align: center; text-indent: 0;">Click image to open enlarged image in new tab</p>
 <br></br>
+
+<h2>Code Snippets</h2>
+<p>
+In the third step (making the POST request), there multiple syntax issues that can go awry if you aren't careful. The capitalization of "Content-Type", malformed request body, HTTP Basic Authentication (`client id` and `client secret` must be base64 encoded and in a specific format). I personally chose to use Axios to make requests. This ended up being a fantastic decision, as Axios provides a special request config option to provide HTTP Basic Authentication and formats it for you. Here is my Axios request config/options: 
+<blockquote>
+
+```js
+  const options = {
+    method: "post",
+    url: "https://api.notion.com/v1/oauth/token",
+    auth: {
+      username: process.env.OAUTH_CLIENT_ID,
+      password: process.env.OAUTH_CLIENT_SECRET,
+    },
+    data: {
+      grant_type: "authorization_code",
+      code: temp_code,
+      redirect_uri: "https://example.com/oauth/redirect",
+    },
+    headers: { "Content-Type": "application/json" },
+  };
+```
+
+</blockquote>
+
+Then, in order to make the request, I use the `axios()` method (no aliases or shorthands), like so:
+<blockquote>
+
+```js
+    axios(options).then((res) => {
+        ...
+    }).catch((err) => {
+        ...
+    });
+```
+
+</blockquote>
+</p>
