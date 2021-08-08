@@ -1,11 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: "Naomi Perez's Portfolio",
+    title: 'Naomi Perez',
+    author: {
+      name: 'Naomi Perez',
+    },
     description:
       "Naomi Perez's Software Development Online Portfolio.",
     url: "https://naomiperez.netlify.app",
     // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
-    github: "@naomiperez",
+    githubUsername: "naomiperez",
+    titleTemplate: '%s | Naomi Perez'
   },
   plugins: [
     `gatsby-plugin-netlify`,

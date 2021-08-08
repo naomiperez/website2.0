@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
-export default function Blurb({ title, children }) {
+export default function Blurb({ title, children, showImage }) {
   return (
     <section className="blurb">
       <div className="container">
@@ -9,9 +9,9 @@ export default function Blurb({ title, children }) {
           <h1>{title}</h1>
           {children}
         </div>
-        <div>
+        {showImage ?  <div>
           <StaticImage src="../images/typing.png" width="310" className="avatar" alt="Typing on Keyboard" />
-        </div>
+        </div> : <></>}
       </div>
     </section>
   )

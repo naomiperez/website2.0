@@ -4,15 +4,22 @@ import Projects from '../components/Projects'
 import { headData } from '../mock/data'
 import courses from '../mock/courses'
 import Layout from '../components/Layout'
+import Blurb from '../components/Blurb'
+import SEO from '../components/SEO'
 
 export default function Education() {
   return (
     <Layout>
-      <Helmet title={`Education | ${headData.title}`} />
+      <SEO 
+        title="Education"
+        description="Naomi Perez Education Overview"
+      />
+      <Blurb title="Education">
+           <p>
+           A history of my formal educational experiences
+            </p>
+        </Blurb>
       <div className="container">
-        <header>
-          <h1>Education.</h1>
-          <p className="subtitle">A history of my formal educational experiences</p>
           <h2>University of Maryland, College Park</h2>
           <h4 className="no-underline">
             B.S. in Computer Science
@@ -78,7 +85,6 @@ export default function Education() {
             pig must escape an angry farmer and avoid obstacles like pitchforks and hay bails D: ! 
             I lead the gameplay design, which was inpired by my recent decision to become vegan. 
           </p>         
-        </header>
       </div>
     </Layout>
   )

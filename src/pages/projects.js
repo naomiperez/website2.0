@@ -3,17 +3,24 @@ import Helmet from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
 import { headData } from '../mock/data';
 import Layout from '../components/Layout';
+import Blurb from '../components/Blurb';
+import SEO from '../components/SEO';
 
 export default function ProjectsIndex() {
   return (
     <Layout>
-      <Helmet title={`Projects | ${headData.title}`} />
+      <SEO title="Projects" description="Naomi Perez's Projects"/>
+      <Blurb title="Projects">
+        <p>A few highlights of my projects</p>
+      </Blurb>
       <div className="container">
         <div className="full-project">
           <h1>Projects.</h1>
-          <p className="subtitle" style={{textIndent: 0}}>A few projects I&apos;ve created.</p>
+          <p className="subtitle" style={{ textIndent: 0 }}>
+            A few projects I&apos;ve created.
+          </p>
           <h2>Add+</h2>
-          <p>
+          <p style={{textIndent: 0}}>
             <small>
               <i>
                 Tools: React.js, React Native, Expo SDK, Firestore, Firebase Auth, Victory Native
@@ -22,11 +29,17 @@ export default function ProjectsIndex() {
             </small>
           </p>
           <p>
-            Add+ allows users to track daily logs of various mental health factors such as mood, sleep, caffeine intake, and energy levels. Add's simplicity of use and soothing, coffee-themed UI are tailored for those who struggle with executive dysfunction. 
-            Utilizing Firebase Authentication and Firestore, users can easily register via email, and all of their data is stored in a persistent and secure database. Various software platforms, tools, and modules such as React Native, Expo, @react-navigation, and the React Context API contribute to Add's fast loading and high performance. 
+            Add+ allows users to track daily logs of various mental health factors such as mood,
+            sleep, caffeine intake, and energy levels. Add's simplicity of use and soothing,
+            coffee-themed UI are tailored for those who struggle with executive dysfunction.
+            Utilizing Firebase Authentication and Firestore, users can easily register via email,
+            and all of their data is stored in a persistent and secure database. Various software
+            platforms, tools, and modules such as React Native, Expo, @react-navigation, and the
+            React Context API contribute to Add's fast loading and high performance.
           </p>
           <p>
-            Add+ also generates visualizations of personal data insights on the "Insights" tab. This feature is implemented using the Victory Native data visualization library.
+            Add+ also generates visualizations of personal data insights on the "Insights" tab. This
+            feature is implemented using the Victory Native data visualization library.
           </p>
           <StaticImage src="../images/80app/home.PNG" width="200" alt="App Homepage" />
           &emsp;&emsp;
@@ -44,7 +57,7 @@ export default function ProjectsIndex() {
             A mobile app built in Android Studio that serves as a virtual moderator for the Mafia
             party game
           </h4>
-          <p>
+          <p style={{textIndent: 0}}>
             <small>
               <i>Tools: Android Studio, Kotlin</i>
             </small>
@@ -67,7 +80,7 @@ export default function ProjectsIndex() {
               href="https://github.com/naomiperez/CMSC436-Group-43"
               target="_blank"
               className="media no-underline"
-              style={{padding: 0, textIndent: 0}}
+              style={{ padding: 0, textIndent: 0 }}
             >
               <StaticImage src="../images/github.png" width="70" alt="GitHub Icon"></StaticImage>
               <p>See GitHub Repo</p>
@@ -79,7 +92,7 @@ export default function ProjectsIndex() {
           <h4 className="no-underline">
             A 2D-platformer game built in Unity that promotes UMD student health
           </h4>
-          <p>
+          <p style={{textIndent: 0}}>
             <small>
               <i>Tools: Unity, C#</i>
             </small>
@@ -105,7 +118,7 @@ export default function ProjectsIndex() {
               href="https://github.com/naomiperez/TestudoNoserubber"
               target="_blank"
               className="media no-underline"
-              style={{padding: 0}}
+              style={{ padding: 0 }}
             >
               <StaticImage src="../images/github.png" width="70" alt="GitHub Icon"></StaticImage>
               <p>See GitHub Repo</p>
@@ -114,7 +127,7 @@ export default function ProjectsIndex() {
         </div>
         <div className="full-project">
           <h2>Ticket Tracking System API</h2>
-          <p>
+          <p style={{textIndent: 0}}>
             <small>
               <i>Tools: JavaScript, Node.js, Express.js, MongoDB</i>
             </small>
@@ -132,7 +145,7 @@ export default function ProjectsIndex() {
           <h4 className="no-underline">
             A concurrent, message-driven resource manager built with Akka framework in Java.
           </h4>
-          <p>
+          <p style={{textIndent: 0}}>
             <small>
               <i>Tools: Akka Framework, Java, Eclipse</i>
             </small>

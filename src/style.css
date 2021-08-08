@@ -139,12 +139,13 @@ a.section-button:hover {
 
 /* Page Header */
 .container  h1 {
-  margin-top: 5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 
 @media screen and (min-width: 800px) {
   .container {
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
 }
 

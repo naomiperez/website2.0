@@ -1,12 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 export default function Post({ data }) {
   const post = data.markdownRemark;
 
   return (
     <Layout>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt || 'nothin’'}
+        pathname={post.slug}
+      />
       <div className="container">
         <div className="blog-content">
           <h1>{post.frontmatter.title}</h1>
