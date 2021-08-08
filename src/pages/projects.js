@@ -15,10 +15,6 @@ export default function ProjectsIndex() {
       </Blurb>
       <div className="container">
         <div className="full-project">
-          <h1>Projects.</h1>
-          <p className="subtitle" style={{ textIndent: 0 }}>
-            A few projects I&apos;ve created.
-          </p>
           <h2>Add+</h2>
           <p style={{textIndent: 0}}>
             <small>
