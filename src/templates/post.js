@@ -10,8 +10,9 @@ export default function Post({ data }) {
     <Layout>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt || 'nothin’'}
+        description={post.frontmatter.excerpt || 'nothin’'}
         pathname={post.slug}
+        article={true}
       />
       <div className="container">
         <div className="blog-content">
@@ -31,6 +32,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MM/DD/YYYY")
+        excerpt
       }
     }
   }

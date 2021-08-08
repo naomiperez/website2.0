@@ -3,15 +3,17 @@ import { Link, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import { headData } from '../mock/data';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Blurb from '../components/Blurb';
 
 export default function Blog({ data }) {
   const { posts } = data.blog;
 
   return (
     <Layout>
-      <Helmet title={`Blog | ${headData.title}`} />
+      <SEO title="Naomi's Blog" description="Naomi Perez's Blog Posts" />
+      <Blurb title="My Blog Posts"></Blurb>
       <div className="container">
-        <h1>My blog (varying content)</h1>
         <br></br>
           {posts.map((post) => (
             <article key={post.id}>

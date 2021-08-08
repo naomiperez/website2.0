@@ -2,6 +2,7 @@
 title: Developing a Global Feminist Consciousness
 author: Naomi
 date: 2021-05-30
+excerpt: An essay on global feminism via a discussion about Borderlands-La Frontera by Gloria Anzaldua
 ---
 
 Feminism is a convoluted, and often cyclical journey. It requires a lifetime of learning new ways of interpreting the world, and unlearning interpretations. One method of developing one’s feminist consciousness is global feminism. Gloria Anzaldua contributes her book *Borderlands: La Frontera* as a memoir and a piece of literature to aid in a global feminist awareness. In *Borderlands*, Anzaldua addresses how one can acknowledge repressive systems, while also rising above them. Anzaldua employs parallelism, variation in genre, and motifs of dichotomy and the Coatlicue State to illustrate how identity formation is an integral part of developing a global feminist consciousness. Her work exhibits that a feminist’s identity must transcends her nation and the oppressive systems she exists in.
