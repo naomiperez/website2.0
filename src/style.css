@@ -144,7 +144,7 @@ a.section-button:hover {
 
 @media screen and (min-width: 800px) {
   .container {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 }
 
@@ -517,7 +517,7 @@ a code[class*='language-']:hover {
   color: white !important;
 }
 
-/* Navbar */
+/* ------------------------------ Nav Bar ------------------------------ */
 
 main {
   margin-top: 50px;
@@ -695,7 +695,7 @@ main {
   }
 }
 
-/* Footer */
+/* ------------------------------ Footer ------------------------------ */
 
 .footer {
   padding: 2rem 0;
@@ -776,7 +776,7 @@ main {
   }
 }
 
-/* Tables */
+/* ------------------------------ Tables ------------------------------ */
 
 table {
   display: block;
@@ -827,7 +827,7 @@ tbody tr:nth-child(even) {
   }
 }
 
-/* Grid and flex */
+/* --------------------------- Grid & Flex ------------------------------ */
 
 .flex {
   display: flex;
@@ -857,86 +857,7 @@ tbody tr:nth-child(even) {
   justify-content: center;
 }
 
-/* Search */
-
-.search-form {
-  display: flex;
-}
-
-[type='search'] {
-  padding: 0.8rem 1rem;
-  background: var(--light-background);
-  border: 2px solid var(--border);
-  width: 100%;
-  max-width: 400px;
-  border-radius: 0.35rem;
-  font-size: 1rem;
-  -webkit-appearance: none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4rem;
-}
-
-.search-form [type='search'] {
-  border-right: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-::placeholder,
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-moz-placeholder,
-:-ms-input-placeholder {
-  color: var(--light-font-color);
-}
-
-/* Suggested */
-
-.suggested {
-  flex-direction: column;
-  align-items: stretch;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 0;
-}
-
-.suggested span {
-  font-weight: 400;
-  display: block;
-  font-size: 0.9rem;
-  color: var(--transparent-text);
-}
-
-.suggested a {
-  background: none;
-  margin: 0.5rem 1rem;
-  border-bottom: none;
-  transition: all 0.2s ease;
-  padding: 1.5rem;
-  border-radius: 0.35rem;
-  background: var(--light-background);
-  color: var(--heading-color);
-}
-
-.suggested a:hover {
-  transform: translate3D(0, -1px, 0);
-  background: var(--light-background-hover);
-}
-
-@media screen and (min-width: 800px) {
-  .suggested {
-    flex-direction: row;
-  }
-  .suggested a {
-    flex: 0 0 calc(50% - 2rem);
-  }
-  .suggested a:first-of-type {
-    text-align: right;
-  }
-}
-
-/* Helpers */
+/* ------------------------------ Helpers ------------------------------ */
 
 .small {
   max-width: 600px;
@@ -955,7 +876,7 @@ time,
   font-size: 1rem;
 }
 
-/* Tags */
+/* ------------------------------ Tags ------------------------------ */
 
 .count {
   font-weight: 700;
@@ -1029,7 +950,7 @@ kbd {
   }
 }
 
-/* Posts */
+/* ------------------------------ Posts ------------------------------ */
 
 .post-row {
   display: flex;
@@ -1097,7 +1018,7 @@ kbd {
   }
 }
 
-/* Projects */
+/* ------------------------------ Projects ------------------------------ */
 
 .projects {
   display: grid;
@@ -1174,6 +1095,26 @@ kbd {
   }
 }
 
+/* --------------- (Full) Projects Page ------------------------------ */
+.full-project {
+  padding-bottom: 2rem;
+}
+
+.full-project p {
+  text-indent: 2.5em;
+}
+
+.full-project img {
+  padding: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .full-project img {
+    padding: 1rem;
+    max-height: 400px;
+  }
+}
+
 .stack-mobile {
   display: flex;
   flex-direction: column;
@@ -1190,7 +1131,7 @@ kbd {
   color: white;
 }
 
-/* Media */
+/* ------------------------------ Media ------------------------------ */
 .media-grid {
   flex-wrap: wrap;
   flex-direction: column;
@@ -1211,7 +1152,15 @@ kbd {
   margin-top: 0.5rem !important;
 }
 
-/* About Page */
+.no-underline img {
+  padding: 0 !important;
+}
+
+.no-underline:hover {
+  border: none;
+}
+
+/* ------------------------------ About Page ------------------------------ */
 
 .about {
   display: flex;
@@ -1246,23 +1195,6 @@ kbd {
   border: 3px solid var(--border-color);
 }
 
-/* YouTube Embed */
-.video-responsive {
-  position: relative !important;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  margin: 5% 10% 5% 10%;
-}
-
-.video-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
 /* Education (Courses) Grid */
 .courses-grid {
   display: flex;
@@ -1272,4 +1204,15 @@ kbd {
 .course-item {
   width:25%;
   margin: 20px;
+}
+
+/* ------------------------------ Blog ------------------------------ */
+.blog-content p {
+  text-indent: 1.5rem;
+}
+
+@media screen and (min-width: 800px){
+  .blog-content p {
+    text-indent: 2rem;
+  }
 }

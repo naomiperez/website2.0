@@ -36,6 +36,13 @@ module.exports = {
         path: `${__dirname}/src/blog/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog-images`,
+        path: `${__dirname}/src/blog/images`,
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -44,7 +51,7 @@ module.exports = {
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 300,
+                maxWidth: 800,
               },
             },
           ],
