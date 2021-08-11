@@ -1101,18 +1101,16 @@ kbd {
   padding-bottom: 2rem;
 }
 
-.full-project p {
-  text-indent: 2.5em;
-}
-
 .full-project img {
   padding: 2rem;
+  border-radius: 3rem;
 }
 
 @media screen and (max-width: 800px) {
   .full-project img {
     padding: 1rem;
     max-height: 400px;
+    border-radius: 3rem;
   }
 }
 
@@ -1179,7 +1177,6 @@ kbd {
 }
 
 .row p {
-  text-indent: 50px;
   text-align: justify;
 }
 

@@ -72,6 +72,7 @@ export default function ProjectsIndex() {
             using Kotlin, a programming language comparable to Java with added features.
           </p>
           <p>
+            <center>
             <a
               href="https://github.com/naomiperez/CMSC436-Group-43"
               target="_blank"
@@ -81,6 +82,7 @@ export default function ProjectsIndex() {
               <StaticImage src="../images/github.png" width="70" alt="GitHub Icon"></StaticImage>
               <p>See GitHub Repo</p>
             </a>
+            </center>
           </p>
         </div>
         <div className="full-project">
@@ -107,9 +109,12 @@ export default function ProjectsIndex() {
             scripts), game physics, moving platforms via linear interpolation with vectors, and
             sound effects. I also lead the creative design of the gameplay and UI.
           </p>
+          <center>
           <StaticImage src="../images/tnr.png" width="600" alt="Gameplay Screenshot" />
+          </center>
           <br></br>
           <p>
+          <center>
             <a
               href="https://github.com/naomiperez/TestudoNoserubber"
               target="_blank"
@@ -119,6 +124,7 @@ export default function ProjectsIndex() {
               <StaticImage src="../images/github.png" width="70" alt="GitHub Icon"></StaticImage>
               <p>See GitHub Repo</p>
             </a>
+            </center>
           </p>
         </div>
         <div className="full-project">
