@@ -12,9 +12,8 @@ export default class Media extends React.Component {
                 <a href="https://github.com/naomiperez" target="_blank" className="media" >
                     <StaticImage src="../images/github.png" width="100" alt="GitHub" />
                 </a>
-                <a href="https://docs.google.com/document/d/1S3BlhLZJvhDDUNZ7pOEjT7ic9kaV2zvH/edit?usp=sharing&ouid=113715452245383192870&rtpof=true&sd=true" target="_blank" className="media" ><StaticImage src="../images/resume.png" width="90" alt="Resume" rel="noreferrer"></StaticImage></a>
+                <a href="https://docs.google.com/document/d/e/2PACX-1vREt_MRSTOvR_6Bfv7y83Dzume1zrt9rphyH8dRNtUrqcv2rIDvYOuTTMYcQQcg4A/pub" target="_blank" className="media" ><StaticImage src="../images/resume.png" width="90" alt="Resume" rel="noreferrer"></StaticImage></a>
             </div>
         );
     }
-
 }
