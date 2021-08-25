@@ -15,7 +15,7 @@ export default function ProjectsIndex() {
       </Blurb>
       <div className="container">
         <div className="full-project">
-          <h2>Add+</h2>
+          <h2>AddMoodTracker</h2>
           <p style={{textIndent: 0}}>
             <small>
               <i>
@@ -37,15 +37,23 @@ export default function ProjectsIndex() {
             Add+ also generates visualizations of personal data insights on the "Insights" tab. This
             feature is implemented using the Victory Native data visualization library.
           </p>
-          <StaticImage src="../images/80app/home.PNG" width="200" alt="App Homepage" />
+          <StaticImage src="../images/add/onboard1.PNG" width="150" alt="App Onboarding Screen" />
           &emsp;&emsp;
           <StaticImage
-            src="../images/80app/sleepTrack.PNG"
-            width="200"
-            alt="App Sleep Tracking on Homepage"
+            src="../images/add/onboard2.PNG"
+            width="150"
+            alt="App Onboarding Screen"
           />
           &emsp;&emsp;
-          <StaticImage src="../images/80app/insights.PNG" width="200" alt="App Insights Page" />
+          <StaticImage src="../images/add/onboard3.PNG" width="150" alt="App Onboarding Screen" />
+          &emsp;&emsp;
+          <StaticImage src="../images/add/login.PNG" width="150" alt="App Login Screen" ></StaticImage>
+          &emsp;&emsp;
+          <StaticImage src="../images/add/home.PNG" width="150" alt="App Home Screen 1" ></StaticImage>
+          &emsp;&emsp;
+          <StaticImage src="../images/add/home2.PNG" width="150" alt="App Home Screen 2" ></StaticImage>
+          &emsp;&emsp;
+          <StaticImage src="../images/80app/insights.PNG" width="150" alt="App Insights Page" />
         </div>
         <div className="full-project">
           <h2>MAFIA43 Android App</h2>
