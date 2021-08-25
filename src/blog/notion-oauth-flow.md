@@ -1,8 +1,8 @@
 ---
-title: Authenticating Users in a Public Notion API Integration (Node.js, Express.js)
+title: Authenticating Users in a Notion API Integration (Node.js, Express.js)
 author: Naomi
 date: 2021-08-07
-excerpt: A flow diagram on using OAuth 2.0 to authorize a Notion API public integration
+excerpt: A flow diagram on using OAuth 2.0 to authorize a Notion API public integration (using Node.js and Express.js)
 ---
 
 As I develop a public integration with the new Notion API, I wanted to share a flow diagram I created. In my integration, I use a Node/Express.js back-end to gain user's Notion workspace credentials. Once I have the credentials, I can make calls to the Notion API to retrieve user's page/workspace content, update content, etc. In the future, I hope to elaborate on this post and/or create more to provide more resource that are specific to Node and Express.js, like example code.

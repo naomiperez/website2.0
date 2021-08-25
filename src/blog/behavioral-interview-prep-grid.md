@@ -1,15 +1,11 @@
 ---
-title: An Interview Prep (Grid) Template based on Gayle Laakmann McDowell's "Cracking the Coding Interview" Prep Grid
+title: A Behavioral Interview Prep (Grid) Template
 author: Naomi Perez
 date: 2021-08-24
-excerpt: A Google Sheet template to use when preparing for behavioral interviews
+excerpt: A Google Sheet template to use when preparing for behavioral interviews based on Gayle Laakmann McDowell's "Cracking the Coding Interview" Interview Grid Template
 ---
 
 <h2>What is the Behavioral Interview Prep Grid?</h2>
-
-Feel free to scroll to the bottom of the page if you know about this template and just want the link :)
-
-...
 
 Behavioral interviews require us to dig deeper into our past professional and academic experiences, to demonstrate what kind of engineer and team member we are. They also require us to dig ***deep*** into our memory to recall past experiences. It's completely normal to have difficulty recalling our past, especially when we're put on the spot in an interview, all while being expected to show our best selves! 
 

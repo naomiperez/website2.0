@@ -11,7 +11,7 @@ export default function Blog({ data }) {
 
   return (
     <Layout>
-      <SEO title="Naomi's Blog" description="Naomi Perez's Blog Posts" />
+      <SEO title="Naomi Perez's Blog" description="Naomi Perez's Blog Posts" />
       <Blurb title="My Blog Posts"></Blurb>
       <div className="container">
         <br></br>

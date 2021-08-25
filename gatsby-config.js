@@ -19,6 +19,7 @@ module.exports = {
     // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     githubUsername: 'naomiperez',
     titleTemplate: '%s | Naomi Perez',
+    keywords: 'Naomi, Perez, Naomi Perez, Naomi Portfolio, Naomi Perez Portfolio, Naomi Perez website'
   },
   plugins: [
     'gatsby-plugin-robots-txt',
