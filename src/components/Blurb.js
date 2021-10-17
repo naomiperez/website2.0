@@ -10,7 +10,7 @@ export default function Blurb({ title, children, showImage }) {
           {children}
         </div>
         {showImage ?  <div>
-          <StaticImage src="../images/profilePic.jpg" width="310" className="avatar" alt="Typing on Keyboard" />
+          <StaticImage src="../images/profilePic.JPG" width="310" className="avatar" alt="Typing on Keyboard" />
         </div> : <></>}
       </div>
     </section>
