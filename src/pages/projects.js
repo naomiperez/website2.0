@@ -9,18 +9,48 @@ import SEO from '../components/SEO';
 export default function ProjectsIndex() {
   return (
     <Layout>
-      <SEO title="Projects" description="Naomi Perez's Projects"/>
+      <SEO title="Projects" description="Naomi Perez's Projects" />
       <Blurb title="Projects">
         <p>A few highlights of my projects</p>
       </Blurb>
       <div className="container">
         <div className="full-project">
+          <h2>MoorseCode</h2>
+          <p style={{ textIndent: 0 }}>
+            <small>
+              <i>Technologies: JavaScript, Node.js, npm, React.js, MaterialUI</i>
+            </small>
+          </p>
+          <p>
+            MoorseCode is a series of projects that allow users to encode and decode a version of
+            morse code, Moo-rse Code. <br /><br />
+            <p>
+              npx Module: An open-source npx command line tool that allows users to encode and decode Moorse Code.{' '}
+              <br />
+              <StaticImage src="../images/moorse.png" alt="Moorse Code NPX Module Example" />
+              Link:{' '}
+              <a href="https://www.npmjs.com/package/moorse-code">
+                https://www.npmjs.com/package/moorse-code
+              </a>
+            </p>
+            <br />
+            <p>
+              Web App: A web app that allows users to translate Moorse Code. <br />
+              <StaticImage src="../images/moorseWeb.png" alt="Moorse Code Web App Example" />
+              Link:{' '}
+              <a href="https://moorse-code.netlify.app/" target="_blank">
+                https://moorse-code.netlify.app/
+              </a>
+            </p>
+          </p>
+        </div>
+        <div className="full-project">
           <h2>AddMoodTracker</h2>
-          <p style={{textIndent: 0}}>
+          <p style={{ textIndent: 0 }}>
             <small>
               <i>
-                Tools: React.js, React Native, Expo SDK, Firestore, Firebase Auth, Victory Native
-                (Data Visualization Library)
+                TTechnologies: React.js, React Native, Expo SDK, Firestore, Firebase Auth, Victory
+                Native (Data Visualization Library)
               </i>
             </small>
           </p>
@@ -39,19 +69,27 @@ export default function ProjectsIndex() {
           </p>
           <StaticImage src="../images/add/onboard1.PNG" width="150" alt="App Onboarding Screen" />
           &emsp;&emsp;
-          <StaticImage
-            src="../images/add/onboard2.PNG"
-            width="150"
-            alt="App Onboarding Screen"
-          />
+          <StaticImage src="../images/add/onboard2.PNG" width="150" alt="App Onboarding Screen" />
           &emsp;&emsp;
           <StaticImage src="../images/add/onboard3.PNG" width="150" alt="App Onboarding Screen" />
           &emsp;&emsp;
-          <StaticImage src="../images/add/login.PNG" width="150" alt="App Login Screen" ></StaticImage>
+          <StaticImage
+            src="../images/add/login.PNG"
+            width="150"
+            alt="App Login Screen"
+          ></StaticImage>
           &emsp;&emsp;
-          <StaticImage src="../images/add/home.PNG" width="150" alt="App Home Screen 1" ></StaticImage>
+          <StaticImage
+            src="../images/add/home.PNG"
+            width="150"
+            alt="App Home Screen 1"
+          ></StaticImage>
           &emsp;&emsp;
-          <StaticImage src="../images/add/home2.PNG" width="150" alt="App Home Screen 2" ></StaticImage>
+          <StaticImage
+            src="../images/add/home2.PNG"
+            width="150"
+            alt="App Home Screen 2"
+          ></StaticImage>
           &emsp;&emsp;
           <StaticImage src="../images/80app/insights.PNG" width="150" alt="App Insights Page" />
         </div>
@@ -61,9 +99,9 @@ export default function ProjectsIndex() {
             A mobile app built in Android Studio that serves as a virtual moderator for the Mafia
             party game
           </h4>
-          <p style={{textIndent: 0}}>
+          <p style={{ textIndent: 0 }}>
             <small>
-              <i>Tools: Android Studio, Kotlin</i>
+              <i>Technologies: Android Studio, Kotlin</i>
             </small>
           </p>
           <p>
@@ -81,15 +119,15 @@ export default function ProjectsIndex() {
           </p>
           <p>
             <center>
-            <a
-              href="https://github.com/naomiperez/CMSC436-Group-43"
-              target="_blank"
-              className="media no-underline"
-              style={{ padding: 0, textIndent: 0 }}
-            >
-              <StaticImage src="../images/github.png" width="70" alt="GitHub Icon"></StaticImage>
-              <p>See GitHub Repo</p>
-            </a>
+              <a
+                href="https://github.com/naomiperez/CMSC436-Group-43"
+                target="_blank"
+                className="media no-underline"
+                style={{ padding: 0, textIndent: 0 }}
+              >
+                <StaticImage src="../images/github.png" width="70" alt="GitHub Icon"></StaticImage>
+                <p>See GitHub Repo</p>
+              </a>
             </center>
           </p>
         </div>
@@ -98,9 +136,9 @@ export default function ProjectsIndex() {
           <h4 className="no-underline">
             A 2D-platformer game built in Unity that promotes UMD student health
           </h4>
-          <p style={{textIndent: 0}}>
+          <p style={{ textIndent: 0 }}>
             <small>
-              <i>Tools: Unity, C#</i>
+              <i>Technologies: Unity, C#</i>
             </small>
           </p>
           <p>
@@ -118,28 +156,28 @@ export default function ProjectsIndex() {
             sound effects. I also lead the creative design of the gameplay and UI.
           </p>
           <center>
-          <StaticImage src="../images/tnr.png" width="600" alt="Gameplay Screenshot" />
+            <StaticImage src="../images/tnr.png" width="600" alt="Gameplay Screenshot" />
           </center>
           <br></br>
           <p>
-          <center>
-            <a
-              href="https://github.com/naomiperez/TestudoNoserubber"
-              target="_blank"
-              className="media no-underline"
-              style={{ padding: 0 }}
-            >
-              <StaticImage src="../images/github.png" width="70" alt="GitHub Icon"></StaticImage>
-              <p>See GitHub Repo</p>
-            </a>
+            <center>
+              <a
+                href="https://github.com/naomiperez/TestudoNoserubber"
+                target="_blank"
+                className="media no-underline"
+                style={{ padding: 0 }}
+              >
+                <StaticImage src="../images/github.png" width="70" alt="GitHub Icon"></StaticImage>
+                <p>See GitHub Repo</p>
+              </a>
             </center>
           </p>
         </div>
         <div className="full-project">
           <h2>Ticket Tracking System API</h2>
-          <p style={{textIndent: 0}}>
+          <p style={{ textIndent: 0 }}>
             <small>
-              <i>Tools: JavaScript, Node.js, Express.js, MongoDB</i>
+              <i>Technologies: JavaScript, Node.js, Express.js, MongoDB</i>
             </small>
           </p>
           <p>
@@ -155,9 +193,9 @@ export default function ProjectsIndex() {
           <h4 className="no-underline">
             A concurrent, message-driven resource manager built with Akka framework in Java.
           </h4>
-          <p style={{textIndent: 0}}>
+          <p style={{ textIndent: 0 }}>
             <small>
-              <i>Tools: Akka Framework, Java, Eclipse</i>
+              <i>Technologies: Akka Framework, Java, Eclipse, JUnit</i>
             </small>
           </p>
           <p>
