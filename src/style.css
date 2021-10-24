@@ -379,8 +379,9 @@ h5 {
 .avatar {
   display: block;
   max-height: 200px;
+  max-width: 200px;
   margin: 1.5rem auto 0;
-  border-radius: 12px;
+  border-radius: 6px;
   border: 3px solid var(--border-color);
 }
 
@@ -410,8 +411,9 @@ h5 {
   .avatar {
     margin-top: 0;
     max-height: none;
-    max-width: 310px;
+    /* max-width: 310px; */
     margin-left: 2rem;
+    border-radius: 12px;
   }
 }
 
@@ -1102,14 +1104,14 @@ kbd {
 }
 
 .full-project img {
-  padding: 2rem;
-  border-radius: 3rem;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
   .full-project img {
-    padding: 1rem;
-    max-height: 400px;
+    padding: 2rem;
+
     border-radius: 3rem;
   }
 }

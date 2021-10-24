@@ -15,7 +15,7 @@ export default function ProjectsIndex() {
       </Blurb>
       <div className="container">
         <div className="full-project">
-          <h2>MoorseCode</h2>
+          <h2>🐮 MoorseCode</h2>
           <p style={{ textIndent: 0 }}>
             <small>
               <i>Technologies: JavaScript, Node.js, npm, React.js, MaterialUI</i>
@@ -45,7 +45,7 @@ export default function ProjectsIndex() {
           </p>
         </div>
         <div className="full-project">
-          <h2>AddMoodTracker</h2>
+          <h2>🧠 AddMoodTracker</h2>
           <p style={{ textIndent: 0 }}>
             <small>
               <i>
@@ -92,9 +92,25 @@ export default function ProjectsIndex() {
           ></StaticImage>
           &emsp;&emsp;
           <StaticImage src="../images/80app/insights.PNG" width="150" alt="App Insights Page" />
+          &emsp;&emsp;
+          
+          <center>
+          <p>
+          <a
+                href="https://github.com/naomiperez/80"
+                target="_blank"
+                className="media no-underline"
+                style={{ padding: 0, textIndent: 0 }}
+              >
+                <StaticImage src="../images/github.png" width="70" alt="GitHub Repo Link for Add App"></StaticImage>
+                <p>See GitHub Repo</p>
+              </a>
+              </p>
+              </center>
+              
         </div>
         <div className="full-project">
-          <h2>MAFIA43 Android App</h2>
+          <h2>🕵️ MAFIA43 Android App</h2>
           <h4 className="no-underline">
             A mobile app built in Android Studio that serves as a virtual moderator for the Mafia
             party game
@@ -132,7 +148,7 @@ export default function ProjectsIndex() {
           </p>
         </div>
         <div className="full-project">
-          <h2>Testudo Noserubber Game</h2>
+          <h2>🐢 Testudo Noserubber Game</h2>
           <h4 className="no-underline">
             A 2D-platformer game built in Unity that promotes UMD student health
           </h4>
@@ -174,7 +190,7 @@ export default function ProjectsIndex() {
           </p>
         </div>
         <div className="full-project">
-          <h2>Ticket Tracking System API</h2>
+          <h2>🎟️ Ticket Tracking System API</h2>
           <p style={{ textIndent: 0 }}>
             <small>
               <i>Technologies: JavaScript, Node.js, Express.js, MongoDB</i>
@@ -189,7 +205,7 @@ export default function ProjectsIndex() {
           </p>
         </div>
         <div className="full-project">
-          <h2>Akka Resource Manager Actor</h2>
+          <h2>✉️ Akka Resource Manager Actor</h2>
           <h4 className="no-underline">
             A concurrent, message-driven resource manager built with Akka framework in Java.
           </h4>
