@@ -11,7 +11,7 @@ export default function About() {
     <Layout>
       <SEO title="About Me" description="About Naomi Perez" />
       <Blurb title="About Me">
-        <p>Junior software engineer and graduate of CS @ UMD.</p>
+        <p>Software engineer and graduate of CS @ UMD.</p>
       </Blurb>
       <div className="about">
         <div className="row">
