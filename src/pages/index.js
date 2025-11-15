@@ -29,7 +29,7 @@ const Home = () => {
     <>
       <Layout>
         <Helmet title={title} />
-        <Blurb title="I'm Naomi Perez." showImage={true}>
+        <Blurb title="Naomi Perez" showImage={true}>
           <p>
             I&apos;m a software developer specializing in building web and mobile applications.
             Welcome to my digital portfolio! 😊
