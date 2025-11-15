@@ -15,14 +15,12 @@ module.exports = {
     },
     description: "Naomi Perez's Software Development Online Portfolio.",
     url: 'https://naomiperez.netlify.app/',
-    siteUrl: 'https://naomiperez.netlify.app/',
-    // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    siteUrl,
     githubUsername: 'naomiperez',
     titleTemplate: '%s | Naomi Perez',
     keywords: 'Naomi, Perez, Naomi Perez, Naomi Portfolio, Naomi Perez Portfolio, Naomi Perez website'
   },
   plugins: [
-    'gatsby-plugin-robots-txt',
     `gatsby-plugin-netlify`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -59,7 +57,6 @@ module.exports = {
         path: `${__dirname}/src/blog/images`,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -68,6 +65,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
+              linkImagesToOriginal: false,
             },
           },
         ],
@@ -89,12 +87,16 @@ module.exports = {
         // Defers execution of google analytics script after page load
         defer: false,
       },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*' }],
+            policy: [{ userAgent: '*', allow: '/' }],
+            sitemap: `${siteUrl}/sitemap.xml`,
+            host: siteUrl,
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
