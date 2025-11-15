@@ -32,7 +32,7 @@ const Home = () => {
         <Blurb title="Naomi Perez" showImage={true}>
           <p>
             I&apos;m a software developer specializing in building web and mobile applications.
-            Welcome to my digital portfolio! 😊
+            Welcome 😊
           </p>
         </Blurb>
         <div className="container index">
