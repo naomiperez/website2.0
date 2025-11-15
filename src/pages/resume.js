@@ -8,34 +8,32 @@ export default function Resume() {
     <Layout>
       <SEO title="Resume" description="Naomi Perez Resume Overview" />
       <Blurb title="Resume">
-        <p>A brief history of where I’ve been and what I’ve built so far.</p>
+        <p>A brief history of where I've been and what I've built so far.</p>
       </Blurb>
       <div className="container">
-        <h2>Education</h2>
-        <h3>University of Maryland, College Park</h3>
-        <h4 className="no-underline">B.S. in Computer Science</h4>
-        <p>
-          <small>
-            <i>August 2017 — May 2021</i>
-          </small>
-        </p>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h1>Naomi Perez</h1>
+          <h2 style={{ fontWeight: 'normal', marginTop: '0.5rem' }}>Fullstack Software Engineer</h2>
+          <p style={{ marginTop: '1rem' }}>
+            Los Angeles, CA | GitHub | LinkedIn
+          </p>
+        </div>
 
         <h2>Technical Skills</h2>
         <p>
-          <strong>Languages:</strong> JavaScript, TypeScript, SQL, Python, Java 8 <br />
+          <strong>Languages:</strong> JavaScript, TypeScript, SQL, Python, Java <br />
           <strong>Backend:</strong> Node.js, Express, REST APIs, OAuth 2.0, PostgreSQL, Redis, NPM, WebSockets, Microservices<br />
-          <strong>Frontend:</strong> React, React Native, HTML/CSS, Material UI, D3.js <br />
           <strong>Cloud & Serverless:</strong> AWS (RDS, S3, Lambda, API Gateway, Kinesis, CloudWatch Logs & Alarms), Docker <br />
-          <strong>Tooling & DevOps:</strong> Git, Buddy CI, Linux, Retool, Metabase, Figma, Postman, Agile/Scrum
+          <strong>Frontend:</strong> React.js, React Native, Gatsby, Material UI, D3.js <br />
+          <strong>DevOps & Tooling:</strong> Git, Buddy CI, Linux, Retool, Metabase, Figma
         </p>
 
         <h2>Experience</h2>
 
-        <h3>Smartcar</h3>
-        <h4 className="no-underline">Software Engineer II</h4>
+        <h3>Smartcar — Software Engineer II</h3>
         <p>
           <small>
-            <i>Dec 2021 — May 2025 | Mountain View, CA (Remote)</i>
+            <i>Dec 2021 - May 2025 Mountain View, CA (Remote)</i>
           </small>
         </p>
         <ul>
@@ -50,13 +48,12 @@ data-driven UX features and customer usage analytics, boosting dashboard engagem
           <li>Regularly contributed to cross-functional project planning, writing and scoping tickets, and mentoring junior
 teammates on debugging, automated testing (Selenium, Jest, Mocha), monitoring, and log instrumentation</li>
           <li>Promoted twice in less than 3 years - setting a company record</li>
-      </ul>
+        </ul>
 
-        <h3>USC Information Sciences Institute (ISI), AI Division</h3>
-        <h4 className="no-underline">Summer Research Intern</h4>
+        <h3>USC Information Sciences Institute (ISI), AI Division – Summer Research Intern</h3>
         <p>
           <small>
-            <i>May 2018 — Aug 2019 | Los Angeles, CA</i>
+            <i>May 2018 – Aug 2019 Los Angeles, CA</i>
           </small>
         </p>
         <ul>
@@ -67,11 +64,10 @@ explore interconnected research data</li>
 ingestion of large CSV datasets (e.g. 2M+ rows) into structured knowledge graphs</li>
         </ul>
 
-        <h3>Deep Brain Neurotech Lab</h3>
-        <h4 className="no-underline">Research Intern & Peer Mentor</h4>
+        <h3>Deep Brain Neurotech Lab, University of Maryland — Research Intern & Peer Mentor</h3>
         <p>
           <small>
-            <i>Aug 2017 — Jan 2019 | College Park, MD</i>
+            <i>Aug 2017 – Jan 2019 College Park, MD</i>
           </small>
         </p>
         <ul>
@@ -82,6 +78,22 @@ disorders (e.g., TMS, EMS)</li>
 refining simulation results for accuracy and reliability</li>
           <li>Trained and mentored 40+ students, facilitating peer learning and tool usage</li>
         </ul>
+
+        <h2>Additional Experience & Leadership</h2>
+        <ul>
+          <li>Grace Hopper Conference Scholar – Awarded full scholarship to attend 2018 GHC based on academic merit
+and leadership in tech</li>
+          <li>Girls Who Code Tutor, University of Maryland – Mentored middle and high school students in Python and
+web development as part of GWC outreach and after-school club</li>
+        </ul>
+
+        <h2>Education</h2>
+        <h3>University of Maryland, College Park — B.S. in Computer Science</h3>
+        <p>
+          <small>
+            <i>2017 – 2021</i>
+          </small>
+        </p>
       </div>
     </Layout>
   );
