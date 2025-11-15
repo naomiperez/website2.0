@@ -7,7 +7,8 @@ import SEO from '../components/SEO';
 import Blurb from '../components/Blurb';
 
 export default function Blog({ data }) {
-  const { posts } = data.blog;
+  const { posts } = data.blog; 
+  const activePosts = posts.filter((post) => !post.frontmatter.archived);
 
   return (
     <Layout>
@@ -15,7 +16,7 @@ export default function Blog({ data }) {
       <Blurb title="My Blog Posts"></Blurb>
       <div className="container">
         <br></br>
-          {posts.map((post) => (
+          {activePosts.map((post) => (
             <article key={post.id}>
               <Link to={post.fields.slug}>
                 <h2>{post.frontmatter.title}</h2>
@@ -42,6 +43,7 @@ export const pageQuery = graphql`
           date(fromNow: true)
           title
           author
+          archived
         }
         excerpt
         id

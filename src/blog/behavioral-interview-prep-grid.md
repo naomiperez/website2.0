@@ -3,6 +3,7 @@ title: A Behavioral Interview Prep (Grid) Template
 author: Naomi Perez
 date: 2021-08-24
 excerpt: A Google Sheet template to use when preparing for behavioral interviews based on Gayle Laakmann McDowell's "Cracking the Coding Interview" Interview Grid Template
+archived: true
 ---
 
 <h2>What is the Behavioral Interview Prep Grid?</h2>
