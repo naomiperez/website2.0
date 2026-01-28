@@ -29,7 +29,7 @@ const Home = () => {
     <>
       <Layout>
         <Helmet title={title} />
-        <Blurb title="Naomi Perez" showImage={true}>
+        <Blurb title="Naomi Perez" showImage>
           <p>
             I&apos;m a software developer specializing in building web and mobile applications.
             Welcome 😊
@@ -40,7 +40,7 @@ const Home = () => {
             <Projects data={projects} />
           </Section>
           <Section title="Where else you can find me...">
-            <Media></Media>
+            <Media />
           </Section>
         </div>
       </Layout>
