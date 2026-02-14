@@ -112,14 +112,8 @@ export default function Resume() {
 
         <h2>Additional Experience & Leadership</h2>
         <ul>
-          <li>
-            Grace Hopper Conference Scholar – Awarded full scholarship to attend 2018 GHC based on
-            academic merit and leadership in tech
-          </li>
-          <li>
-            Girls Who Code Tutor, University of Maryland – Mentored middle and high school students
-            in Python and web development as part of GWC outreach and after-school club
-          </li>
+          <li>Grace Hopper Conference Scholar – 2018</li>
+          <li>Girls Who Code Tutor, University of Maryland</li>
         </ul>
 
         <h2>Education</h2>
