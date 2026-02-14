@@ -64,7 +64,15 @@ export default function Resume() {
           <li>Promoted twice in less than 3 years - setting a company record</li>
         </ul>
 
-        <h3>USC Information Sciences Institute (ISI), AI Division – Summer Research Intern</h3>
+        <h3>
+          <a
+            href="https://knowledgecaptureanddiscovery.github.io/authors/naomi-perez/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            USC Information Sciences Institute (ISI), AI Division – Summer Research Intern
+          </a>
+        </h3>
         <p>
           <small>
             <i>May 2018 – Aug 2019 Los Angeles, CA</i>
