@@ -36,9 +36,11 @@ const Home = () => {
           </p>
         </Blurb>
         <div className="container index">
+          {/* Temporarily hidden
           <Section title="Projects.">
             <Projects data={projects} />
           </Section>
+          */}
           <Section title="Where else you can find me...">
             <Media />
           </Section>
