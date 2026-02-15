@@ -31,7 +31,11 @@ export default function Resume() {
 
         <h2>Experience</h2>
 
-        <h3>Smartcar — Software Engineer II</h3>
+        <h3>
+          <a href="https://smartcar.com" target="_blank" rel="noopener noreferrer">
+            Smartcar — Software Engineer II
+          </a>
+        </h3>
         <p>
           <small>
             <i>Dec 2021 - May 2025 Mountain View, CA (Remote)</i>
