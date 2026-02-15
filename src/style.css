@@ -1212,19 +1212,74 @@ kbd {
   color: white;
 }
 
-/* ------------------------------ Media ------------------------------ */
+/* ------------------------------ Media (hand-drawn icons) ------------------------------ */
+/* Skills: transforms, transitions, :nth-child, keyframes, prefers-reduced-motion */
 .media-grid {
+  display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .media-grid a {
-  border:0px !important; 
+  border: 0 !important;
+}
+
+.media-grid.media-grid--hand-drawn .media__link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transform-origin: center;
+}
+
+/* Slight "taped on the fridge" rotation per icon – hand-drawn vibe */
+.media-grid--hand-drawn .media__link:nth-child(1) { transform: rotate(-4deg); }
+.media-grid--hand-drawn .media__link:nth-child(2) { transform: rotate(2deg); }
+.media-grid--hand-drawn .media__link:nth-child(3) { transform: rotate(-2deg); }
+
+/* Hover: straighten, pop up, soft shadow – whimsical but not chaotic */
+.media-grid--hand-drawn .media__link:hover {
+  transform: rotate(0deg) scale(1.12);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+}
+
+.media-grid--hand-drawn .media__icon-wrap {
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+/* Subtle "wiggle" on hover – runs once via animation */
+.media-grid--hand-drawn .media__link:hover .media__icon-wrap {
+  animation: hand-drawn-wiggle 0.5s ease-out;
+}
+
+@keyframes hand-drawn-wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-6deg); }
+  75% { transform: rotate(4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media-grid--hand-drawn .media__link,
+  .media-grid--hand-drawn .media__link:hover .media__icon-wrap {
+    transition: none;
+    animation: none;
+  }
+  .media-grid--hand-drawn .media__link:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+}
+
+.media__icon {
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.06));
 }
 
 .media {
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 0 1rem;
 }
 
 .no-underline {
