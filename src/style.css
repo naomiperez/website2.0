@@ -91,20 +91,24 @@ body::after {
   background-image:
     /* fine film grain */
     url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.35' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E"),
-    /* paper fibers */
+    /* paper fibers – thin, subtle lines (thinner and more realistic) */
     repeating-linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.05) 0px,
-      rgba(0, 0, 0, 0.05) 1px,
+      transparent 0px,
       transparent 2px,
-      transparent 6px
+      rgba(0, 0, 0, 0.025) 2px,
+      rgba(0, 0, 0, 0.025) 2.5px,
+      transparent 3px,
+      transparent 8px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(0, 0, 0, 0.03) 0px,
-      rgba(0, 0, 0, 0.03) 1px,
-      transparent 2px,
-      transparent 9px
+      transparent 0px,
+      transparent 3px,
+      rgba(0, 0, 0, 0.018) 3px,
+      rgba(0, 0, 0, 0.018) 3.5px,
+      transparent 4px,
+      transparent 10px
     );
   background-size: 220px 220px, 100% 100%, 100% 100%;
   mix-blend-mode: multiply;
