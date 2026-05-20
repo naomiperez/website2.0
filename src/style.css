@@ -661,6 +661,50 @@ main {
   margin-right: -1rem;
 }
 
+/* ------------------ Theme toggle wiggle ------------------
+   Subtle "come pet me" cue on the ☕/🌿 toggle.
+   Timing: first wiggle ~4s after load, then once every 12s.
+   Hover/focus pauses the animation and scales the button up so it
+   never moves out from under the user's cursor.
+   Respects prefers-reduced-motion. */
+#dark-mode-button {
+  display: inline-block;
+  transform-origin: 50% 80%; /* pivot near the saucer, not the cup body */
+  transition: transform 0.2s ease;
+}
+
+/* Animation only applies when NOT being interacted with.
+   This way the :hover transform isn't fighting the keyframes.
+   `animation-iteration-count: 4` = wiggle fires 4 times then stops
+   forever. Once the user has been on the page long enough to make a
+   choice, the cup goes still so it isn't ambient visual noise. */
+#dark-mode-button:not(:hover):not(:focus-visible) {
+  animation: theme-toggle-wiggle 12s ease-in-out 4s 4;
+}
+
+#dark-mode-button:hover,
+#dark-mode-button:focus-visible {
+  transform: scale(1.15);
+}
+
+@keyframes theme-toggle-wiggle {
+  /* Wiggle lives in the first ~10% of the cycle, then dead-still
+     for the remaining ~10.8s. Decaying amplitude mimics damping. */
+  0%   { transform: rotate(0deg); }
+  2%   { transform: rotate(-12deg); }
+  4%   { transform: rotate(10deg); }
+  6%   { transform: rotate(-7deg); }
+  8%   { transform: rotate(4deg); }
+  10%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #dark-mode-button:not(:hover):not(:focus-visible) {
+    animation: none;
+  }
+}
+
 .navbar a .emoji {
   display: none;
 }
