@@ -1,23 +1,26 @@
 :root {
-    --font-color: #ccb997;
-    --heading-color: #c59a61;
-    --dark-font-color: #b68b50;
-    --background: #472e1df3;
-    --medium-font-color: #dfcebd;
-    --light-font-color: #dfcebd;
-    --light-background: #684a35;
-    --light-background-hover: #4b2b09;
-    --code-background-color: #2e2e30;
-    --border: #dfcebd;
-    --link-color: #d6c188;
-    --link-color-darker: #caaa8a;
-    --link-hover-color: #dfbe9e;
-    --navbar-color: #1d1d1d;
-    --blockquote: #2a4661;
-    --transparent-text: rgba(255, 255, 255, 0.8);
-    --transparent-bg: rgba(0, 0, 0, 0.2);
-    --light-transparent-bg: rgba(255, 255, 255, 0.05);
-    --border-color: #c59a61;
+    /* Dark theme — "Evening espresso + monstera"
+       Softer chocolate-brown background + warm cream text + muted plant green accents.
+       Less saturated than the previous palette, easier on the eyes for long reads. */
+    --font-color: #e6dcc8;           /* warm cream */
+    --heading-color: #f1e8d5;        /* lighter cream for headings */
+    --dark-font-color: #f1e8d5;
+    --background: #221c16;           /* dark espresso (less orange than before) */
+    --medium-font-color: #c9bca4;    /* muted oat */
+    --light-font-color: #a89c87;     /* soft mocha */
+    --light-background: #322a22;     /* card / inline-code background */
+    --light-background-hover: #45382c;
+    --code-background-color: #2a2520;
+    --border: #45382c;
+    --link-color: #a3c4ad;           /* soft monstera green */
+    --link-color-darker: #cadcc6;
+    --link-hover-color: #dceee0;
+    --navbar-color: #1a140f;         /* near-black espresso */
+    --blockquote: #2d3a31;           /* subtle deep-green tint */
+    --transparent-text: rgba(255, 255, 255, 0.85);
+    --transparent-bg: rgba(0, 0, 0, 0.25);
+    --light-transparent-bg: rgba(255, 255, 255, 0.04);
+    --border-color: #c9bca4;
   }
   
   h1 {
@@ -60,18 +63,18 @@
   }
   
   .navbar a {
-    color:#dfcebd;
+    color: #e6dcc8;
   }
-  
+
   .navbar a:hover,
   .navbar a[aria-current='page'],
   .footer a:hover {
-    color: rgb(238, 232, 224);
+    color: #f1e8d5;
     border-color: transparent;
   }
-  
+
   .navbar a.brand {
-    color: #dfcebd;
+    color: #f1e8d5;
   }
   
   .filename {
@@ -169,7 +172,7 @@
   }
   
   .blurb {
-    background: #684a35;
+    background: #322a22;
   }
   
   /* Media */
