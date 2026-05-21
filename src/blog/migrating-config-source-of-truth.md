@@ -12,17 +12,17 @@ excerpt: A walkthrough of a top-down full-stack migration that consolidated a ha
   <li><strong>The result:</strong> ~700 lines of duplicated config replaced by ~400 lines of database-backed infrastructure. Six weeks of work, zero broken integrations, and a class of bugs eliminated for good.</li>
 </ul>
 
-<h2>Why small config rots fast</h2>
+<h2>Why this was worth fixing</h2>
 
 <p>It started as a small feature request: add three new countries to the supported-countries list.</p>
 
 <p>I was a software engineer at Smartcar at the time. I went looking for where the list lived, and I found it in the auth service. I added three lines, ran the tests, opened the PR. Then a teammate caught it: "you also need to update it in the dashboard frontend." I added the three countries there. Then in the compatibility matrix. Then in an internal database-proxy service. Then in a backend utility module. Then in a region-grouping helper.</p>
 
-<p>By the time I was done with the "simple" feature, I had touched six repositories and shipped a coordinated multi-PR migration. The next person to add or remove a country would have to do the same dance — or, more likely, miss one of the six places, and the system would be subtly inconsistent for some subset of users.</p>
+<p>By the time I was done with the "simple" feature, I had touched six repositories and ended up shipping a coordinated multi-PR change. The next person to add or remove a country would have to do the same thing — or, more likely, miss one of the six places, and the system would be subtly inconsistent for some subset of users.</p>
 
-<p>This is the kind of bug that doesn't crash anything. It just slowly poisons the user experience.</p>
+<p>It wasn't the kind of bug that crashes anything. It was the kind that quietly makes the user experience inconsistent for some people, depending on which surface of the product they were looking at.</p>
 
-<p>I scoped a follow-up project: kill all six hardcoded lists, replace them with a single source of truth, migrate every consumer. Six weeks later it was done.</p>
+<p>I scoped a follow-up project to consolidate all six hardcoded lists into a single source of truth and migrate every consumer over to it. Six weeks later it was done.</p>
 
 <h2>The shape of the problem</h2>
 
@@ -39,7 +39,7 @@ excerpt: A walkthrough of a top-down full-stack migration that consolidated a ha
   <li>Several <strong>region groupings</strong> ("Europe," "North America") were derived from the country list.</li>
 </ul>
 
-<p>Each consumer had different latency tolerances, different cache lifetimes, and different deployment cadences. A naive "rip out the list, point everything at the database" wouldn't work. Some consumers needed near-instant lookup. Some could tolerate hundreds of milliseconds. The static site compiled at build time and couldn't make a runtime DB call at all.</p>
+<p>Each consumer had different latency tolerances, different cache lifetimes, and different deployment cadences. A simple "remove the list and point everything at the database" approach wouldn't work. Some consumers needed near-instant lookup. Some could tolerate hundreds of milliseconds. The static site compiled at build time and couldn't make a runtime DB call at all.</p>
 
 <h2>The plan</h2>
 
@@ -51,7 +51,7 @@ Postgres table  →  ORM model + queries  →  DB-proxy whitelist
    →  React hooks + sagas + Netlify function
 ```
 
-<p>The key constraint: at every stage, the system had to keep working. No big-bang flip.</p>
+<p>The key constraint: at every stage, the system had to keep working. No all-at-once cutover.</p>
 
 <h2>Stage 1 — the database</h2>
 
@@ -70,7 +70,7 @@ CREATE TABLE countries (
 
 <p><strong>No synthetic id.</strong> The country code (ISO 3166-1) is already a stable, globally unique identifier. Adding an autoincrement <code>id</code> would have been one more thing to keep in sync between environments. I added a primary-key constraint on <code>code</code> in a follow-up migration.</p>
 
-<p><strong>Region as a string, not a foreign key.</strong> I considered normalizing into a <code>regions</code> table. I didn't — there are five regions, they don't change, and a foreign key would have meant every consumer needed to do a join. The extra normalization would have purchased nothing and added query complexity for everyone.</p>
+<p><strong>Region as a string, not a foreign key.</strong> I considered normalizing into a <code>regions</code> table, but decided not to. There are only five regions, they don't change, and a foreign key would have meant every consumer needed to do a join. The extra normalization wouldn't have gained much, and it would have added query complexity for every consumer.</p>
 
 <h2>Stage 2 — the ORM model and queries</h2>
 
@@ -80,11 +80,11 @@ CREATE TABLE countries (
 
 <p>The database-proxy service was a thin layer that let other services execute pre-approved queries against the database without coupling those services to the schema. Every callable query had to be explicitly whitelisted to prevent unbounded query exposure.</p>
 
-<p>I added <code>findAll</code> and <code>getByCode</code> to the whitelist for the new <code>Country</code> model. While I was there, I fixed a latent bug where an empty <code>params</code> object wasn't iterable — caught by the new query exercising a previously-unused code path. Classic stale-code-meets-new-usage scenario.</p>
+<p>I added <code>findAll</code> and <code>getByCode</code> to the whitelist for the new <code>Country</code> model. While I was there, I fixed a latent bug where an empty <code>params</code> object wasn't iterable — caught by the new query exercising a previously-unused code path. A classic case of stale code being exercised in a new way.</p>
 
 <h2>Stage 4 — the auth service</h2>
 
-<p>This was the hardest migration. The auth service had a sprawling family of synchronous country utilities — <code>isInvalidCode</code>, <code>getMenuOptions</code>, <code>getRegion</code>, <code>getCodesByRegion</code>, <code>getFallback</code> — embedded throughout request middleware. The middleware expected synchronous lookups.</p>
+<p>This was the hardest migration. The auth service had a large set of synchronous country utilities — <code>isInvalidCode</code>, <code>getMenuOptions</code>, <code>getRegion</code>, <code>getCodesByRegion</code>, <code>getFallback</code> — embedded throughout request middleware, all of which expected synchronous lookups.</p>
 
 <p>The migration had three parts:</p>
 
@@ -124,7 +124,7 @@ const { matrix } = useCompatibilityMatrix({ countries });
   <li><strong>Frontend hooks:</strong> SWR-style caching at the component level.</li>
 </ul>
 
-<p>The country list updates roughly four times a year. Five-minute staleness was fine everywhere. Picking the right cache for each layer was less interesting than picking the right <em>lifetime</em> — too long, and a country addition takes hours to propagate; too short, and you're hammering the database for no reason.</p>
+<p>The country list updates roughly four times a year, so five-minute staleness was fine everywhere. Picking the right cache for each layer mattered less than picking the right <em>lifetime</em> for that cache. Too long, and a country addition takes hours to propagate. Too short, and the database gets called constantly for no real reason.</p>
 
 <h2>Rollout</h2>
 
@@ -157,11 +157,11 @@ const { matrix } = useCompatibilityMatrix({ countries });
 
 <h2>Takeaways</h2>
 
-<p>Two things I'd want a reader to walk away with:</p>
+<p>A few takeaways from the project:</p>
 
 <ol>
-  <li><strong>Hardcoded configuration rots fastest in the places no one looks.</strong> Six places to update means people will miss one. The bug isn't a crash — it's a slow drift toward inconsistency. Migration projects like this aren't glamorous, but they're how you eliminate a class of bugs entirely instead of fixing them one at a time.</li>
-  <li><strong>Top-down migrations beat big-bang flips.</strong> Every layer had a "before" and "after" coexisting until the layer above it was migrated. No coordinated cutover, no rollback nightmare. The only project-wide step at the end was deleting the now-dead static lists.</li>
+  <li><strong>Hardcoded configuration tends to drift out of sync, especially in places no one looks.</strong> When six places need to be updated together, someone will miss one. The result usually isn't a dramatic failure — it's a slow drift toward inconsistency, where different parts of the product show different things to the same user. Migration projects like this aren't flashy, but they prevent a whole class of bugs instead of patching them one at a time.</li>
+  <li><strong>Top-down migrations are easier than doing everything at once.</strong> Because every layer kept its existing hardcoded list until its replacement was ready, the system stayed working throughout. There was no coordinated cutover and no risky rollback. The only project-wide step at the end was deleting the now-unused static lists.</li>
 </ol>
 
 <hr />
