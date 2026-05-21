@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ProjectCard({ project, hero }) {
-  const { emoji, title, year, status, outcome, tags, links, featured } = project;
+  const { emoji, title, year, status, outcome, tags, links, featured, context } = project;
 
   return (
     <article className={`project-card${featured ? ' project-card--featured' : ''}`}>
@@ -9,6 +9,7 @@ export default function ProjectCard({ project, hero }) {
       <div className="project-card__body">
         <div className="project-card__meta">
           <span className="project-card__year">{year}</span>
+          {context && <span className="project-card__context">{context}</span>}
           <span className="project-card__status">{status}</span>
           {featured && <span className="project-card__featured">Featured</span>}
         </div>

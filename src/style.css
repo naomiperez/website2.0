@@ -1315,15 +1315,55 @@ kbd {
 }
 
 .project-card__status,
-.project-card__featured {
+.project-card__featured,
+.project-card__context {
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
   background: var(--transparent-bg);
 }
 
+.project-card__context {
+  /* Work label — slightly stronger so the "where" reads first */
+  background: var(--heading-color);
+  color: var(--background);
+  font-weight: 600;
+}
+
 .project-card__featured {
   background: var(--link-color);
   color: var(--background);
+}
+
+/* ------------------ Project page sections ------------------------- */
+.project-section {
+  margin: 2.5rem 0 3rem;
+}
+
+.project-section:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.project-section__title {
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.project-section__subtitle {
+  margin: 0 0 1.5rem;
+  color: var(--medium-font-color);
+  text-indent: 0;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .project-section__title {
+    font-size: 2rem;
+  }
+  .project-section__subtitle {
+    font-size: 1.15rem;
+  }
 }
 
 .project-card__title {

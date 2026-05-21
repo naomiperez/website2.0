@@ -25,8 +25,55 @@ export const aboutData = {
 };
 
 // PROJECTS DATA
-// Order = display order. Featured projects first.
+// Order within each section = display order. The Projects page splits
+// these into "At Smartcar" (context: 'Smartcar') and "Personal projects"
+// (no context) — so order within each group matters more than overall order.
 export const projectsData = [
+  // -------------------- Smartcar (professional) --------------------
+  {
+    id: 'sc-rate-limiter',
+    emoji: '🚦',
+    title: 'Distributed Rate Limiter',
+    year: 2023,
+    status: 'Shipped',
+    category: 'Backend',
+    context: 'Smartcar',
+    featured: true,
+    outcome:
+      'A per-vehicle sliding-window rate limiter that shields upstream third-party APIs from misbehaving integrations. Sub-millisecond p99 on the hot path with an atomic check-and-insert in a single Redis round trip. Shipped via a three-stage gated rollout — onboarded every new customer with zero regression to existing integrations and ran for 2+ years.',
+    tags: ['Node.js', 'Express', 'Redis', 'Lua', 'TypeScript'],
+    links: [],
+  },
+  {
+    id: 'sc-config-migration',
+    emoji: '🌍',
+    title: 'Full-Stack Config Migration',
+    year: 2024,
+    status: 'Shipped',
+    category: 'Backend',
+    context: 'Smartcar',
+    featured: true,
+    outcome:
+      'Consolidated a hardcoded config list duplicated across six services into a single Postgres-backed source of truth — Sequelize models through OAuth middleware up to React hooks, with per-layer caching so the DB hit never lands on the hot path. Eliminated a recurring class of coordinated multi-repo PRs and broke zero in-production integrations.',
+    tags: ['Postgres', 'Sequelize', 'Node.js', 'Express', 'React', 'Redux Sagas'],
+    links: [],
+  },
+  {
+    id: 'sc-analytics-pipeline',
+    emoji: '📊',
+    title: 'Analytics Dashboard Pipeline',
+    year: 2025,
+    status: 'Shipped',
+    category: 'Data',
+    context: 'Smartcar',
+    featured: true,
+    outcome:
+      'End-to-end customer analytics pipeline behind a redesigned dashboard — Redshift materialized views, Node aggregation processors with gap-backfilling, a Redis caching layer, and React widgets. Sub-second renders, and the graceful-degradation pattern I introduced (empty-shape defaults per processor) became the team standard so one failing query never takes the whole dashboard down.',
+    tags: ['Redshift', 'Postgres', 'Node.js', 'Redis', 'React', 'Sequelize', 'Knex'],
+    links: [],
+  },
+
+  // -------------------- Personal projects --------------------
   {
     id: 'moorse-code',
     emoji: '🐮',
@@ -34,7 +81,6 @@ export const projectsData = [
     year: 2021,
     status: 'Shipped',
     category: 'Web',
-    featured: true,
     outcome:
       'An open-source npx CLI and companion web app that encode and decode a cow-themed twist on Morse code.',
     tags: ['JavaScript', 'Node.js', 'React', 'MaterialUI', 'npm'],
@@ -50,7 +96,6 @@ export const projectsData = [
     year: 2021,
     status: 'Shipped',
     category: 'Mobile',
-    featured: true,
     outcome:
       'A mobile mood tracker designed for people with executive dysfunction — daily logs of mood, sleep, caffeine, and energy with a soothing coffee-themed UI and visual insights.',
     tags: ['React Native', 'Expo', 'Firestore', 'Firebase Auth', 'Victory Native'],

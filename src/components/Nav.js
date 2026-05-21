@@ -18,9 +18,7 @@ export default function Nav() {
 
           <div className="menu-item flex">
             <Link to="/resume">Resume</Link>
-            {/* Projects temporarily hidden — re-enable by uncommenting this link
-                and restoring src/pages/projects.js from src/pages/projects.js.disabled */}
-            {/* <Link to="/projects">Projects</Link> */}
+            <Link to="/projects">Projects</Link>
             <Link to="/about">About</Link>
             <Link to="/blog">Blog</Link>
           </div>
