@@ -35,7 +35,7 @@ export default function Media() {
         </span>
       </a>
       <a
-        href="https://drive.google.com/file/d/1-tu5tMeETxbSgg6v4RpTbrj5H9NIBnbP/view?usp=sharing"
+        href="https://docs.google.com/document/d/120Et-twQ4ST9mPET73sFLFP4TX0d1Q_S8u8O_z49K_M/edit?usp=drive_link"
         target="_blank"
         rel="noreferrer"
         className="media media__link"
